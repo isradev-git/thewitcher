@@ -24,14 +24,14 @@
         <div class="video-background">
             <video autoplay muted loop id="header-video">
                 <!-- Reemplazar con enlace al video 4K de la cinemática de The Witcher 3 -->
-                <source src="./images/video/The Witcher Killing Monsters Fight Scene Cinematic 4K ULTRA HD The Witcher 3 Cinematics.mp4 Witcher Killing Monsters Fight Scene Cinematic 4K ULTRA HD The Witcher 3 Cinematics.mp4" type="video/mp4">
+                <source src="./images/video/The Witcher Killing Monsters Fight Scene Cinematic 4K ULTRA HD The Witcher 3 Cinematics.mp4" type="video/mp4">
                 Tu navegador no soporta video HTML5.
             </video>
         </div>
         <div class="header-overlay"></div>
         <div class="container header-content">
             <div class="logo">
-                <img src="./images/logo/logo-blanco-thewitcher.png" alt="The Witcher 3 logo">
+                <img src="./images/logo/tw-logo-blanco.png" alt="The Witcher 3 logo">
             </div>
             <nav class="main-nav">
                 <ul>
@@ -57,16 +57,13 @@
             <h2 class="section-title">El Universo de The Witcher</h2>
             <div class="universe-content">
                 <div class="universe-text">
-                    <!-- <p class="typing-effect">
-En el Norte devastado por la guerra, donde los reinos luchan por sobrevivir contra el avance implacable de Nilfgaard, Geralt de Rivia, el legendario brujo, busca a su hija adoptiva Ciri, la Chica de la Profecía. Su viaje lo llevará a través de vastos territorios, enfrentando monstruos, intrigas políticas y fuerzas sobrenaturales que amenazan con sumir al mundo en el caos…
-                    </p> -->
                     <p class="typing-effect">
-El Continente de The Witcher se formó tras la Conjunción de las Esferas, un evento mágico que trajo monstruos y conectó mundos. Los reinos humanos del Norte se erigieron sobre antiguos dominios élficos y luchan entre sí mientras resisten al Imperio de Nilfgaard, al sur, que ansía la conquista con su ejército disciplinado. Las campañas bélicas generan intrigas palaciegas, traiciones y alianzas temporales. En academias como Aretuza y Oxenfurt, magos y hechiceras generan pactos que influyen en reinos. Los brujos de Kaer Morhen, mutados para cazar criaturas sobrenaturales —espectros, trasgos, wendigos— recorren bosques, pantanos y ruinas para proteger poblados, manteniendo neutralidad en asuntos humanos. En ciudades y puertos, mercaderes, espías y bandidos comercian desde hierbas mágicas hasta esclavos, mientras elfos desplazados luchan en guerrillas Scoia’tael para recuperar su legado. Este mundo combina tensiones bélicas, política y un bestiario surgido de antiguas leyendas y misterios.
+En el Norte devastado por la guerra, donde los reinos luchan por sobrevivir contra el avance implacable de Nilfgaard, Geralt de Rivia, el legendario brujo, busca a su hija adoptiva Ciri, la Chica de la Profecía. Su viaje lo llevará a través de vastos territorios, enfrentando monstruos, intrigas políticas y fuerzas sobrenaturales que amenazan con sumir al mundo en el caos…
                     </p>
+                    <!-- <p class="typing-effect">
+El Continente de The Witcher se formó tras la Conjunción de las Esferas, un evento mágico que trajo monstruos y conectó mundos. Los reinos humanos del Norte se erigieron sobre antiguos dominios élficos y luchan entre sí mientras resisten al Imperio de Nilfgaard, al sur, que ansía la conquista con su ejército disciplinado. Las campañas bélicas generan intrigas palaciegas, traiciones y alianzas temporales. En academias como Aretuza y Oxenfurt, magos y hechiceras generan pactos que influyen en reinos. Los brujos de Kaer Morhen, mutados para cazar criaturas sobrenaturales —espectros, trasgos, wendigos— recorren bosques, pantanos y ruinas para proteger poblados, manteniendo neutralidad en asuntos humanos. En ciudades y puertos, mercaderes, espías y bandidos comercian desde hierbas mágicas hasta esclavos, mientras elfos desplazados luchan en guerrillas Scoia’tael para recuperar su legado. Este mundo combina tensiones bélicas, política y un bestiario surgido de antiguas leyendas y misterios.
+                    </p> -->
                 </div>
-                <!-- <div class="universe-map">
-                    <iframe src="https://witcher3map.com/v/#2/112.5/112.0" allowfullscreen allow="geolocation" frameborder="0"></iframe>
-                </div> -->
             </div>
         </div>
     </section>
@@ -137,6 +134,67 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
     </div>
   </div>
 </section>
+
+<!-- Sección “Localizaciones” -->
+<section id="location" class="section-location">
+  <div class="container">
+    <!-- Título principal de la sección -->
+    <h2 class="section-title">Localizaciones Jugables</h2>
+    <!-- Texto descriptivo debajo del título -->
+    <p class="section-description">
+      Explora los rincones más emblemáticos del universo de The Witcher.  
+      Desde las bulliciosas calles de Novigrad hasta los oscuros bosques de Velen,  
+      cada lugar tiene su propia historia y peligros por descubrir.
+    </p>
+
+    <!-- Contenedor del carrusel -->
+    <div class="location-carousel">
+      <!-- Flecha izquierda -->
+      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+
+      <!-- Pista de imágenes del carrusel -->
+      <div class="carousel-track">
+        <!-- Cada .carousel-item representa una localización -->
+        <!-- Atributos data-* se usarán en JavaScript para actualizar título/desc. -->
+        <div class="carousel-item" data-title="Novigrad" data-description="La ciudad portuaria más grande del Norte, cuna de comerciantes, bandidos y chapuzas políticas.">
+          <img src="img/locations/novigrad.jpg" alt="Novigrad">
+        </div>
+        <div class="carousel-item" data-title="Velen" data-description="Tierras devastadas por la guerra, llenas de pantanos y bosques oscuros donde acechan monstruos y bandidos.">
+          <img src="img/locations/velen.jpg" alt="Velen">
+        </div>
+        <div class="carousel-item" data-title="Skellige" data-description="Un archipiélago salvaje y montañoso, hogar de clanes vikingos y peligrosas criaturas marinas.">
+          <img src="img/locations/skellige.jpg" alt="Skellige">
+        </div>
+        <div class="carousel-item" data-title="Kaer Morhen" data-description="La antigua fortaleza de la Escuela del Lobo, refugio y campo de entrenamiento de los brujos.">
+          <img src="img/locations/kaer-morhen.jpg" alt="Kaer Morhen">
+        </div>
+        <div class="carousel-item" data-title="Oxenfurt" data-description="Ciudad universitaria famosa por su legado académico, puentes góticos y tabernas bulliciosas.">
+          <img src="img/locations/oxenfurt.jpg" alt="Oxenfurt">
+        </div>
+        <div class="carousel-item" data-title="Toussaint" data-description="Tierra de viñedos y fiestas perpetuas, con castillos medievales y tierras bañadas por el sol.">
+          <img src="img/locations/toussaint.jpg" alt="Toussaint">
+        </div>
+        <!-- Añade aquí más .carousel-item según necesites -->
+      </div>
+
+      <!-- Flecha derecha -->
+      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <!-- Contenedor para el título y descripción activa -->
+    <div class="carousel-info">
+      <h3 id="location-title">Novigrad</h3>
+      <p id="location-description">
+        La ciudad portuaria más grande del Norte, cuna de comerciantes, bandidos y chapuzas políticas.
+      </p>
+    </div>
+  </div>
+</section>
+
 
     <!-- Sección “Armas y Armaduras” -->
     <section id="weapons" class="section-weapons">
@@ -213,28 +271,6 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
                         <span>Mistletoe</span>
                         <span>Verbena</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Sección “Mapa” -->
-    <section id="map" class="section-map">
-        <div class="container">
-            <h2 class="section-title">Mapa del Continente</h2>
-            <div class="interactive-map">
-                <div class="map-image">
-                    <img src="img/map/witcher3_map.jpg" alt="Mapa del Continente" usemap="#witchermap">
-                    <map name="witchermap">
-                        <area shape="rect" coords="100,200,200,300" href="#novigrad" alt="Novigrad" title="Novigrad">
-                        <area shape="rect" coords="300,150,400,250" href="#velen" alt="Velen" title="Velen">
-                        <area shape="rect" coords="500,50,600,150" href="#skellige" alt="Skellige" title="Skellige">
-                        <area shape="rect" coords="200,400,300,500" href="#kaer-morhen" alt="Kaer Morhen" title="Kaer Morhen">
-                    </map>
-                </div>
-                <div class="map-info" id="map-info">
-                    <h3 id="map-location">Selecciona una región</h3>
-                    <p id="map-description">Haz clic en una región del mapa para obtener información detallada sobre esa zona.</p>
                 </div>
             </div>
         </div>
