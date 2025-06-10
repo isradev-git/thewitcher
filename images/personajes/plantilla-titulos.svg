@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="mm"
-     inkscape:zoom="4.2440236"
-     inkscape:cx="284.98899"
-     inkscape:cy="276.27085"
+     inkscape:zoom="0.093780559"
+     inkscape:cx="4942.389"
+     inkscape:cy="101.30031"
      inkscape:window-width="2560"
      inkscape:window-height="1387"
      inkscape:window-x="1912"
@@ -40,9 +40,9 @@
      id="layer1">
     <text
        xml:space="preserve"
-       style="font-size:5.64444px;font-family:Quantum;-inkscape-font-specification:Quantum;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0"
-       x="75.808563"
-       y="68.078087"
+       style="font-size:712.264px;font-family:Quantum;-inkscape-font-specification:Quantum;text-align:center;text-anchor:middle;fill:#000000;stroke-width:0"
+       x="1906.8861"
+       y="-990.32507"
        id="text1"
        inkscape:export-filename="geralt-titulo.png"
        inkscape:export-xdpi="96"
@@ -50,12 +50,12 @@
          sodipodi:role="line"
          id="tspan1"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:thewitcher;-inkscape-font-specification:thewitcher;fill:#e03e3e;fill-opacity:1;stroke-width:0"
-         x="75.808563"
-         y="68.078087">Geralt</tspan><tspan
+         x="1906.8861"
+         y="-990.32507">Geralt</tspan><tspan
          sodipodi:role="line"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:thewitcher;-inkscape-font-specification:thewitcher;fill:#e03e3e;fill-opacity:1;stroke-width:0"
-         x="75.808563"
-         y="75.219948"
+         x="1906.8861"
+         y="-89.103378"
          id="tspan2">de rivia</tspan></text>
   </g>
 </svg>

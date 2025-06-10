@@ -318,6 +318,13 @@ section {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+@media (min-width: 450px) {
+  .characters-grid {
+    grid-template-columns: repeat(1fr);
+    row-gap: 50px;
+  }
+}
+
 .card {
   width: var(--card-width);
   height: var(--card-height);
