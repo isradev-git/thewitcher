@@ -14,83 +14,88 @@
    Variables CSS (colores, tipografías)
 ------------------------------------- */
 :root {
-    /* Colores principales */
-    --black: #000000;
-    --dark-bg: #0c0c0c;
-    --darker-bg: #0b0b0b;
-    --gray-bg: #1a1a1a;
-    --accent-red: #e03e3e;
-    --accent-red-dark: #c53838;
-    --text-white: #ffffff;
-    --text-light: #dddddd;
-    --text-gray: #aaaaaa;
+  /* Colores principales */
+  --black: #000000;
+  --dark-bg: #0c0c0c;
+  --darker-bg: #0b0b0b;
+  --gray-bg: #1a1a1a;
+  --accent-red: #e03e3e;
+  --accent-red-dark: #c53838;
+  --text-white: #ffffff;
+  --text-light: #dddddd;
+  --text-gray: #aaaaaa;
 
-    /* Tipografías */
-    --font-title: 'Cinzel', serif;
-    --font-body: 'Roboto', sans-serif;
+  /* Tipografías */
+  --font-title: 'Cinzel', serif;
+  --font-body: 'Roboto', sans-serif;
 
-    /* Transiciones */
-    --transition-fast: 0.2s ease;
-    --transition-medium: 0.3s ease;
+  /* Transiciones */
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.3s ease;
 
-    /* Sombra suave roja */
-    --shadow-red: rgba(224, 62, 62, 0.4);
+  /* Sombra suave roja */
+  --shadow-red: rgba(224, 62, 62, 0.4);
+
+  /* Tarjetas de personajes */
+  --card-height: 300px;
+  --card-width: calc(var(--card-height) / 1.5);
 }
 
 /* ===========================
    Reset & Estilos Globales
    =========================== */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body {
-    width: 100%;
-    height: 100%;
-    background-color: var(--black);
-    color: var(--text-white);
-    font-family: var(--font-body);
-    overflow-x: hidden;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: var(--black);
+  color: var(--text-white);
+  font-family: var(--font-body);
+  overflow-x: hidden;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
+  list-style: none;
 }
 
 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
-    outline: none;
-    border: none;
-    cursor: pointer;
-    font-family: var(--font-body);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-body);
 }
 
 /* Contenedor centrado */
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 /* Clases utilitarias */
 .text-center {
-    text-align: center;
+  text-align: center;
 }
 
 .hidden {
-    display: none !important;
+  display: none !important;
 }
 
 /* ------------------------------------------------------------
@@ -125,8 +130,13 @@ button {
 }
 
 @keyframes spin {
-  0%   { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 
@@ -134,303 +144,271 @@ button {
    HEADER (Video de fondo, logo, nav)
    =========================== */
 .main-header {
-    position: relative;
-    /* margin-top: -70px; */
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+  position: relative;
+  /* margin-top: -70px; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .video-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
 }
 
 .video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: brightness(0.9);
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.9);
 }
 
 .header-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.65);
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.65);
+  z-index: 2;
 }
 
 .header-content {
-    position: relative;
-    z-index: 3;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 20px;
-    text-align: center;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
 }
 
 /* Logo */
 .logo img {
-    max-width: 700px;
-    width: 100%;
-    height: auto;
-    /* margin-bottom: 24px; */
-    margin-bottom: 30px;
-    pointer-events: none;
+  max-width: 700px;
+  width: 100%;
+  height: auto;
+  /* margin-bottom: 24px; */
+  margin-bottom: 30px;
+  pointer-events: none;
 }
 
 /* Navegación principal */
 .main-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-bottom: 30px;
 }
 
 .main-nav ul li a {
-    font-family: var(--font-title);
-    font-size: 1rem;
-    color: var(--text-white);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 8px 12px;
-    transition: color var(--transition-fast);
+  font-family: var(--font-title);
+  font-size: 1rem;
+  color: var(--text-white);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  transition: color var(--transition-fast);
 }
 
 .main-nav ul li a:hover,
 .main-nav ul li a:focus {
-    color: var(--accent-red);
+  color: var(--accent-red);
 }
 
 /* ===========================
    SECCIONES GENERALES
    =========================== */
 section {
-    position: relative;
-    padding: 80px 0;
+  position: relative;
+  padding: 80px 0;
 }
 
 .section-title {
-    font-family: var(--font-title);
-    font-size: 2.5rem;
-    color: var(--accent-red);
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  color: var(--accent-red);
+  text-align: center;
+  margin-bottom: 40px;
+  position: relative;
 }
 
 .section-title::after {
-    content: '';
-    display: block;
-    width: 60px;
-    height: 4px;
-    background-color: var(--accent-red);
-    margin: 12px auto 0;
-    border-radius: 2px;
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--accent-red);
+  margin: 12px auto 0;
+  border-radius: 2px;
 }
 
 /* ======================================
    SECCIÓN “El Universo de The Witcher”
    ====================================== */
 #universe {
-    /* background: url('../img/universe-bg.jpg') center center / cover no-repeat fixed; */
-    /* background: url('../img/thewitcher/img-tw/wp9411143-witcher-4k-pc-wallpapers.jpg') center center / cover no-repeat fixed; */
-    color: var(--text-white);
+  /* background: url('../img/universe-bg.jpg') center center / cover no-repeat fixed; */
+  /* background: url('../img/thewitcher/img-tw/wp9411143-witcher-4k-pc-wallpapers.jpg') center center / cover no-repeat fixed; */
+  color: var(--text-white);
 }
 
 .universe-content {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    align-items: flex-start;
-    justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .universe-text {
-    flex: 1 1 400px;
-    background-color: rgba(0, 0, 0, 0.55);
-    backdrop-filter: blur(6px);
-    padding: 24px;
-    border-radius: 8px;
+  flex: 1 1 400px;
+  background-color: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  padding: 24px;
+  border-radius: 8px;
 }
 
 .universe-text .typing-effect {
-    font-family: var(--font-title);
-    font-size: 1.1rem;
-    line-height: 1.6;
-    white-space: pre-wrap;
-    letter-spacing: 0.5px;
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  /* white-space: pre-wrap; */
+  letter-spacing: 0.5px;
 }
+
 /* =============================================
    Sección “Personajes” – estilos para la grid
    ============================================= */
 .section-characters {
   background-color: var(--darker-bg);
 }
+
 /* Grid responsivo: tarjetas una junto a otra */
-.characters-grid {
+/* .characters-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 24px;
   align-items: stretch;
   margin-top: 20px;
+} */
+ .characters-grid {
+  display: grid;
+  /* gap: 24px; */
+  row-gap: 24px;
+  align-items: stretch;
+  margin-top: 20px;
+
+  /* Móvil: quepan tantas de 220px como aguante */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
-/* Contenedor de cada tarjeta */
-.character-card {
+
+/* A partir de 960px de ancho, forzamos siempre 4 columnas */
+@media (min-width: 960px) {
+  .characters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.card {
+  width: var(--card-width);
+  height: var(--card-height);
   position: relative;
-  cursor: pointer;
-  perspective: 1000px; /* sólo necesario si queremos flip 3D (opción B). */
-  outline: none;       /* ocultamos el borde por defecto */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 0 36px;
+  perspective: 2500px;
+  margin: 0 50px;
 }
 
-/* Opción A: mostrar frontal/trasera con simple ocultar/mostrar (sin 3D)
-
-   .card-front y .card-back ocupan el mismo espacio; al hacer hover, invertimos visibilidad.
-*/
-.card-front,
-.card-back {
-  position: absolute;
-  top: 0;
-  left: 0;
+.cover-image {
   width: 100%;
   height: 100%;
-  border-radius: 8px;
-  overflow: hidden;
-  background-color: var(--gray-bg);
-  box-shadow: 0 4px 8px var(--shadow-red);
-  transition: opacity var(--transition-medium), transform var(--transition-medium);
+  object-fit: cover;
 }
 
-/* --- Diseño de la cara frontal --- */
-.card-front {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 16px;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Imagen dentro de la frontal */
-.card-front img {
+.wrapper {
+  transition: all 0.5s;
+  position: absolute;
   width: 100%;
-  height: auto;
-  border-radius: 4px;
-  margin-bottom: 12px;
+  z-index: -1;
 }
 
-/* Nombre en la frontal */
-.card-front h3 {
-  font-family: var(--font-title);
-  font-size: 1.2rem;
-  color: var(--accent-red);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-top: 8px;
-  text-align: center;
+.card:hover .wrapper {
+  transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+  box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
 }
 
-/* --- Diseño de la cara trasera --- */
-.card-back {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  opacity: 0;            /* invisible por defecto */
-  transform: translateY(10px); /* se mueve ligeramente hacia abajo */
-  color: var(--text-light);
-}
-
-/* Título en la cara trasera */
-.card-back h3 {
-  font-family: var(--font-title);
-  font-size: 1.2rem;
-  color: var(--accent-red);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 12px;
-  text-align: center;
-}
-
-/* Descripción en la trasera */
-.card-back p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  text-align: center;
-}
-
-/* --- Interactividad: hover y focus --- */
-/* Cuando el usuario pase el ratón sobre .character-card 
-   o la tarjeta tenga foco (para teclado), intercambiamos caras. */
-.character-card:hover .card-front,
-.character-card:focus-within .card-front {
+.wrapper::before,
+.wrapper::after {
+  content: "";
   opacity: 0;
-  transform: translateY(-10px);
+  width: 100%;
+  height: 80px;
+  transition: all 0.5s;
+  position: absolute;
+  left: 0;
 }
 
-.character-card:hover .card-back,
-.character-card:focus-within .card-back {
+.wrapper::before {
+  top: 0;
+  height: 100%;
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
+}
+
+.wrapper::after {
+  bottom: 0;
   opacity: 1;
-  transform: translateY(0);
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
 }
 
-/* Agregamos un borde visible para el foco (teclado) */
-.character-card:focus-within {
-  box-shadow: 0 0 0 3px var(--accent-red);
-  /* si deseas un contorno más discreto, puedes ajustar el 3px a 2px */
+.card:hover .wrapper::before,
+.wrapper::after {
+  opacity: 1;
 }
 
-/* Tamaño fijo o mínimo para cada tarjeta */
-.character-card {
-  min-height: 320px; /* ajuste sugerido para altura uniforme */
+.card:hover .wrapper::after {
+  height: 120px;
 }
 
-/* =============================================
-   Media queries para ajustar tipografía y espaciados
-   ============================================= */
-@media (max-width: 768px) {
-  .characters-grid {
-    gap: 16px;
-  }
-  .card-front h3,
-  .card-back h3 {
-    font-size: 1.1rem;
-  }
-  .card-back p {
-    font-size: 0.9rem;
-  }
+.title {
+  width: 100%;
+  transition: transform 0.5s;
 }
 
-@media (max-width: 480px) {
-  .characters-grid {
-    gap: 12px;
-  }
-  .card-front h3,
-  .card-back h3 {
-    font-size: 1rem;
-  }
-  .card-back p {
-    font-size: 0.85rem;
-  }
-  .character-card {
-    min-height: 300px;
-  }
+.card:hover .title {
+  transform: translate3d(0%, -50px, 100px);
 }
+
+.character {
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s;
+  position: absolute;
+  z-index: -1;
+}
+
+.card:hover .character {
+  opacity: 1;
+  transform: translate3d(0%, -30%, 100px);
+}
+
 /* ==============================
    Sección “Localizaciones”
    ============================== */
@@ -565,10 +543,12 @@ section {
   .section-location .section-title {
     font-size: 2.2rem;
   }
+
   .section-location .section-description {
     font-size: 1rem;
     margin-bottom: 32px;
   }
+
   .carousel-arrow {
     width: 40px;
     height: 40px;
@@ -580,13 +560,16 @@ section {
   .section-location {
     padding: 60px 0;
   }
+
   .section-location .section-title {
     font-size: 2rem;
   }
+
   .section-location .section-description {
     font-size: 0.95rem;
     margin-bottom: 24px;
   }
+
   .carousel-arrow {
     width: 36px;
     height: 36px;
@@ -598,19 +581,23 @@ section {
   .section-location {
     padding: 40px 0;
   }
+
   .section-location .section-title {
     font-size: 1.75rem;
   }
+
   .section-location .section-description {
     font-size: 0.9rem;
     margin-bottom: 20px;
   }
+
   .carousel-arrow {
     width: 32px;
     height: 32px;
     left: 8px;
     right: 8px;
   }
+
   /* Ajustar padding de cada item */
   .carousel-item {
     padding: 0 4px;
@@ -624,4 +611,3 @@ section {
 /* ===========================
    RESPONSIVE (Ajustes para móviles)
    =========================== */
-

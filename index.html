@@ -1,462 +1,642 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Witcher 3: Wild Hunt | Compendio Completo</title>
     <!-- Fuentes -->
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Roboto:wght@300;400;500&display=swap"> -->
     <!-- Iconos FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="./css/thewitcher-styles.css">
+    <link rel="stylesheet" href="./css/thewitcher-styles.css" />
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./images/logo/favicon.png">
-</head>
-<body>
+    <link rel="icon" type="image/png" href="./images/logo/favicon.png" />
+  </head>
+
+  <body>
     <!-- Loader -->
     <div class="loader">
-        <div class="witcher-symbol"></div>
+      <div class="witcher-symbol"></div>
     </div>
 
     <!-- Header con video de fondo -->
     <header class="main-header" id="home">
-        <div class="video-background">
-            <video autoplay muted loop id="header-video">
-                <!-- Reemplazar con enlace al video 4K de la cinemática de The Witcher 3 -->
-                <source src="./images/video/The Witcher Killing Monsters Fight Scene Cinematic 4K ULTRA HD The Witcher 3 Cinematics.mp4" type="video/mp4">
-                Tu navegador no soporta video HTML5.
-            </video>
+      <div class="video-background">
+        <video autoplay muted loop id="header-video">
+          <!-- Reemplazar con enlace al video 4K de la cinemática de The Witcher 3 -->
+          <source
+            src="./images/video/The Witcher Killing Monsters Fight Scene Cinematic 4K ULTRA HD The Witcher 3 Cinematics.mp4"
+            type="video/mp4"
+          />
+          Tu navegador no soporta video HTML5.
+        </video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="container header-content">
+        <div class="logo">
+          <img
+            src="./images/logo/tw-logo-blanco.png"
+            alt="The Witcher 3 logo"
+          />
         </div>
-        <div class="header-overlay"></div>
-        <div class="container header-content">
-            <div class="logo">
-                <img src="./images/logo/tw-logo-blanco.png" alt="The Witcher 3 logo">
-            </div>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="#universe">El Universo</a></li>
-                    <li><a href="#characters">Personajes</a></li>
-                    <li><a href="#weapons">Armas</a></li>
-                    <li><a href="#alchemy">Alquimia</a></li>
-                    <li><a href="#map">Mapas</a></li>
-                    <li><a href="#bestiary">Bestiario</a></li>
-                    <li><a href="#lore">Lore</a></li>
-                    <li><a href="#expansions">Expansiones</a></li>
-                </ul>
-            </nav>
-            <!-- <button class="trailer-button" id="trailer-btn">
+        <nav class="main-nav">
+          <ul>
+            <li><a href="#universe">El Universo</a></li>
+            <li><a href="#characters">Personajes</a></li>
+            <li><a href="#weapons">Armas</a></li>
+            <li><a href="#alchemy">Alquimia</a></li>
+            <li><a href="#map">Mapas</a></li>
+            <li><a href="#bestiary">Bestiario</a></li>
+            <li><a href="#lore">Lore</a></li>
+            <li><a href="#expansions">Expansiones</a></li>
+          </ul>
+        </nav>
+        <!-- <button class="trailer-button" id="trailer-btn">
                 <i class="fas fa-play"></i> Ver Tráiler
             </button> -->
-        </div>
+      </div>
     </header>
 
     <!-- Sección “El Universo de The Witcher” -->
     <section id="universe" class="section-universe">
-        <div class="container">
-            <h2 class="section-title">El Universo de The Witcher</h2>
-            <div class="universe-content">
-                <div class="universe-text">
-                    <p class="typing-effect">
-En el Norte devastado por la guerra, donde los reinos luchan por sobrevivir contra el avance implacable de Nilfgaard, Geralt de Rivia, el legendario brujo, busca a su hija adoptiva Ciri, la Chica de la Profecía. Su viaje lo llevará a través de vastos territorios, enfrentando monstruos, intrigas políticas y fuerzas sobrenaturales que amenazan con sumir al mundo en el caos…
-                    </p>
-                    <!-- <p class="typing-effect">
+      <div class="container">
+        <h2 class="section-title">El Universo de The Witcher</h2>
+        <div class="universe-content">
+          <div class="universe-text">
+            <p class="typing-effect">
+              En el Norte devastado por la guerra, donde los reinos luchan por
+              sobrevivir contra el avance implacable de Nilfgaard, Geralt de
+              Rivia, el legendario brujo, busca a su hija adoptiva Ciri, la
+              Chica de la Profecía. Su viaje lo llevará a través de vastos
+              territorios, enfrentando monstruos, intrigas políticas y fuerzas
+              sobrenaturales que amenazan con sumir al mundo en el caos…
+            </p>
+            <!-- <p class="typing-effect">
 El Continente de The Witcher se formó tras la Conjunción de las Esferas, un evento mágico que trajo monstruos y conectó mundos. Los reinos humanos del Norte se erigieron sobre antiguos dominios élficos y luchan entre sí mientras resisten al Imperio de Nilfgaard, al sur, que ansía la conquista con su ejército disciplinado. Las campañas bélicas generan intrigas palaciegas, traiciones y alianzas temporales. En academias como Aretuza y Oxenfurt, magos y hechiceras generan pactos que influyen en reinos. Los brujos de Kaer Morhen, mutados para cazar criaturas sobrenaturales —espectros, trasgos, wendigos— recorren bosques, pantanos y ruinas para proteger poblados, manteniendo neutralidad en asuntos humanos. En ciudades y puertos, mercaderes, espías y bandidos comercian desde hierbas mágicas hasta esclavos, mientras elfos desplazados luchan en guerrillas Scoia’tael para recuperar su legado. Este mundo combina tensiones bélicas, política y un bestiario surgido de antiguas leyendas y misterios.
                     </p> -->
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Sección “Personajes” -->
     <section id="characters" class="section-characters">
-  <div class="container">
-    <h2 class="section-title">Personajes</h2>
+      <div class="container">
+        <h2 class="section-title">Personajes</h2>
 
-    <div class="characters-grid">
-        <!-- Card de Geralt de Rivia -->
-      <div class="character-card" tabindex="0">
-        <div class="card-front">
-          <img src="./img/characters/geralt.jpg" alt="Geralt de Rivia" loading="lazy">
-          <h3>Geralt de Rivia</h3>
+        <div class="characters-grid">
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/dark_rider-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/dark_rider-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/dark_rider-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
+          <a href="" alt="" target="_blank">
+            <div class="card">
+              <div class="wrapper">
+                <img
+                  src="https://ggayane.github.io/css-experiments/cards/force_mage-cover.jpg"
+                  class="cover-image"
+                />
+              </div>
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-title.png"
+                class="title"
+              />
+              <img
+                src="https://ggayane.github.io/css-experiments/cards/force_mage-character.webp"
+                class="character"
+              />
+            </div>
+          </a>
         </div>
-        <div class="card-back">
-          <h3>Geralt de Rivia</h3>
-          <p>
-            El Lobo Blanco, legendario brujo de la Escuela del Lobo. 
-            Mutado y entrenado para cazar monstruos, es famoso por su habilidad con las espadas y sus Sentencias.
+      </div>
+    </section>
+
+    <!-- Sección “Localizaciones” -->
+    <section id="location" class="section-location">
+      <div class="container">
+        <!-- Título principal de la sección -->
+        <h2 class="section-title">Localizaciones Jugables</h2>
+        <!-- Texto descriptivo debajo del título -->
+        <p class="section-description">
+          Explora los rincones más emblemáticos del universo de The Witcher.
+          Desde las bulliciosas calles de Novigrad hasta los oscuros bosques de
+          Velen, cada lugar tiene su propia historia y peligros por descubrir.
+        </p>
+
+        <!-- Contenedor del carrusel -->
+        <div class="location-carousel">
+          <!-- Flecha izquierda -->
+          <button class="carousel-arrow carousel-prev" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+          </button>
+
+          <!-- Pista de imágenes del carrusel -->
+          <div class="carousel-track">
+            <!-- Cada .carousel-item representa una localización -->
+            <!-- Atributos data-* se usarán en JavaScript para actualizar título/desc. -->
+            <div
+              class="carousel-item"
+              data-title="Novigrad"
+              data-description="La ciudad portuaria más grande del Norte, cuna de comerciantes, bandidos y chapuzas políticas."
+            >
+              <img src="img/locations/novigrad.jpg" alt="Novigrad" />
+            </div>
+            <div
+              class="carousel-item"
+              data-title="Velen"
+              data-description="Tierras devastadas por la guerra, llenas de pantanos y bosques oscuros donde acechan monstruos y bandidos."
+            >
+              <img src="img/locations/velen.jpg" alt="Velen" />
+            </div>
+            <div
+              class="carousel-item"
+              data-title="Skellige"
+              data-description="Un archipiélago salvaje y montañoso, hogar de clanes vikingos y peligrosas criaturas marinas."
+            >
+              <img src="img/locations/skellige.jpg" alt="Skellige" />
+            </div>
+            <div
+              class="carousel-item"
+              data-title="Kaer Morhen"
+              data-description="La antigua fortaleza de la Escuela del Lobo, refugio y campo de entrenamiento de los brujos."
+            >
+              <img src="img/locations/kaer-morhen.jpg" alt="Kaer Morhen" />
+            </div>
+            <div
+              class="carousel-item"
+              data-title="Oxenfurt"
+              data-description="Ciudad universitaria famosa por su legado académico, puentes góticos y tabernas bulliciosas."
+            >
+              <img src="img/locations/oxenfurt.jpg" alt="Oxenfurt" />
+            </div>
+            <div
+              class="carousel-item"
+              data-title="Toussaint"
+              data-description="Tierra de viñedos y fiestas perpetuas, con castillos medievales y tierras bañadas por el sol."
+            >
+              <img src="img/locations/toussaint.jpg" alt="Toussaint" />
+            </div>
+            <!-- Añade aquí más .carousel-item según necesites -->
+          </div>
+
+          <!-- Flecha derecha -->
+          <button class="carousel-arrow carousel-next" aria-label="Siguiente">
+            <i class="fas fa-chevron-right"></i>
+          </button>
+        </div>
+
+        <!-- Contenedor para el título y descripción activa -->
+        <div class="carousel-info">
+          <h3 id="location-title">Novigrad</h3>
+          <p id="location-description">
+            La ciudad portuaria más grande del Norte, cuna de comerciantes,
+            bandidos y chapuzas políticas.
           </p>
         </div>
       </div>
-        <!-- Card de Cirilla “Ciri" -->
-      <div class="character-card" tabindex="0">
-        <div class="card-front">
-          <img src="../img/characters/ciri.jpg" alt="Cirilla Fiona" loading="lazy">
-          <h3>Cirilla “Ciri” Fiona</h3>
-        </div>
-        <div class="card-back">
-          <h3>Cirilla “Ciri”</h3>
-          <p>
-            La Chica de la Profecía, hija adoptiva de Geralt y Yennefer. 
-            Posee habilidades únicas como el “Salto en el espacio” y sangre del ancestro real de Cintra.
-          </p>
-        </div>
-      </div>
-        <!-- Card de Yennefer de Vengerberg -->
-      <div class="character-card" tabindex="0">
-        <div class="card-front">
-          <img src="../img/characters/yennefer.jpg" alt="Yennefer de Vengerberg" loading="lazy">
-          <h3>Yennefer de Vengerberg</h3>
-        </div>
-        <div class="card-back">
-          <h3>Yennefer de Vengerberg</h3>
-          <p>
-            Poderosa hechicera y amante de Geralt, miembro influyente del Concilio de Magos. 
-            Conocida por su inteligencia, belleza y aura de misterio.
-          </p>
-        </div>
-      </div>
-        <!-- Card de Triss Merigold -->
-      <div class="character-card" tabindex="0">
-        <div class="card-front">
-          <img src="../img/characters/yennefer.jpg" alt="Yennefer de Vengerberg" loading="lazy">
-          <h3>Yennefer de Vengerberg</h3>
-        </div>
-        <div class="card-back">
-          <h3>Yennefer de Vengerberg</h3>
-          <p>
-            Poderosa hechicera y amante de Geralt, miembro influyente del Concilio de Magos. 
-            Conocida por su inteligencia, belleza y aura de misterio.
-          </p>
-        </div>
-      </div>
-     
-    </div>
-  </div>
-</section>
-
-<!-- Sección “Localizaciones” -->
-<section id="location" class="section-location">
-  <div class="container">
-    <!-- Título principal de la sección -->
-    <h2 class="section-title">Localizaciones Jugables</h2>
-    <!-- Texto descriptivo debajo del título -->
-    <p class="section-description">
-      Explora los rincones más emblemáticos del universo de The Witcher.  
-      Desde las bulliciosas calles de Novigrad hasta los oscuros bosques de Velen,  
-      cada lugar tiene su propia historia y peligros por descubrir.
-    </p>
-
-    <!-- Contenedor del carrusel -->
-    <div class="location-carousel">
-      <!-- Flecha izquierda -->
-      <button class="carousel-arrow carousel-prev" aria-label="Anterior">
-        <i class="fas fa-chevron-left"></i>
-      </button>
-
-      <!-- Pista de imágenes del carrusel -->
-      <div class="carousel-track">
-        <!-- Cada .carousel-item representa una localización -->
-        <!-- Atributos data-* se usarán en JavaScript para actualizar título/desc. -->
-        <div class="carousel-item" data-title="Novigrad" data-description="La ciudad portuaria más grande del Norte, cuna de comerciantes, bandidos y chapuzas políticas.">
-          <img src="img/locations/novigrad.jpg" alt="Novigrad">
-        </div>
-        <div class="carousel-item" data-title="Velen" data-description="Tierras devastadas por la guerra, llenas de pantanos y bosques oscuros donde acechan monstruos y bandidos.">
-          <img src="img/locations/velen.jpg" alt="Velen">
-        </div>
-        <div class="carousel-item" data-title="Skellige" data-description="Un archipiélago salvaje y montañoso, hogar de clanes vikingos y peligrosas criaturas marinas.">
-          <img src="img/locations/skellige.jpg" alt="Skellige">
-        </div>
-        <div class="carousel-item" data-title="Kaer Morhen" data-description="La antigua fortaleza de la Escuela del Lobo, refugio y campo de entrenamiento de los brujos.">
-          <img src="img/locations/kaer-morhen.jpg" alt="Kaer Morhen">
-        </div>
-        <div class="carousel-item" data-title="Oxenfurt" data-description="Ciudad universitaria famosa por su legado académico, puentes góticos y tabernas bulliciosas.">
-          <img src="img/locations/oxenfurt.jpg" alt="Oxenfurt">
-        </div>
-        <div class="carousel-item" data-title="Toussaint" data-description="Tierra de viñedos y fiestas perpetuas, con castillos medievales y tierras bañadas por el sol.">
-          <img src="img/locations/toussaint.jpg" alt="Toussaint">
-        </div>
-        <!-- Añade aquí más .carousel-item según necesites -->
-      </div>
-
-      <!-- Flecha derecha -->
-      <button class="carousel-arrow carousel-next" aria-label="Siguiente">
-        <i class="fas fa-chevron-right"></i>
-      </button>
-    </div>
-
-    <!-- Contenedor para el título y descripción activa -->
-    <div class="carousel-info">
-      <h3 id="location-title">Novigrad</h3>
-      <p id="location-description">
-        La ciudad portuaria más grande del Norte, cuna de comerciantes, bandidos y chapuzas políticas.
-      </p>
-    </div>
-  </div>
-</section>
-
+    </section>
 
     <!-- Sección “Armas y Armaduras” -->
     <section id="weapons" class="section-weapons">
-        <div class="container">
-            <h2 class="section-title">Armas y Armaduras</h2>
-            <div class="weapons-container">
-                <div class="weapons-column">
-                    <h3><i class="fas fa-sword"></i> Espadas</h3>
-                    <div class="weapon-item">
-                        <img src="img/weapons/steel-sword.jpg" alt="Espada de Acero">
-                        <h4>Espada de Acero</h4>
-                        <p>Para humanos y bestias. Fabricada con acero de alta calidad.</p>
-                    </div>
-                    <div class="weapon-item">
-                        <img src="img/weapons/silver-sword.jpg" alt="Espada de Plata">
-                        <h4>Espada de Plata</h4>
-                        <p>Para monstruos. Letal contra criaturas sobrenaturales.</p>
-                    </div>
-                </div>
-                <div class="armor-column">
-                    <h3><i class="fas fa-shield-alt"></i> Armaduras</h3>
-                    <div class="armor-item">
-                        <img src="img/armor/wolf-school.jpg" alt="Armadura de la Escuela del Lobo">
-                        <h4>Escuela del Lobo</h4>
-                        <p>Balanceada entre protección y movilidad. Preferida por Geralt.</p>
-                    </div>
-                    <div class="armor-item">
-                        <img src="img/armor/bear-school.jpg" alt="Armadura de la Escuela del Oso">
-                        <h4>Escuela del Oso</h4>
-                        <p>Pesada y resistente. Ideal para combates cuerpo a cuerpo.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Armas y Armaduras</h2>
+        <div class="weapons-container">
+          <div class="weapons-column">
+            <h3><i class="fas fa-sword"></i> Espadas</h3>
+            <div class="weapon-item">
+              <img src="img/weapons/steel-sword.jpg" alt="Espada de Acero" />
+              <h4>Espada de Acero</h4>
+              <p>
+                Para humanos y bestias. Fabricada con acero de alta calidad.
+              </p>
             </div>
+            <div class="weapon-item">
+              <img src="img/weapons/silver-sword.jpg" alt="Espada de Plata" />
+              <h4>Espada de Plata</h4>
+              <p>Para monstruos. Letal contra criaturas sobrenaturales.</p>
+            </div>
+          </div>
+          <div class="armor-column">
+            <h3><i class="fas fa-shield-alt"></i> Armaduras</h3>
+            <div class="armor-item">
+              <img
+                src="img/armor/wolf-school.jpg"
+                alt="Armadura de la Escuela del Lobo"
+              />
+              <h4>Escuela del Lobo</h4>
+              <p>
+                Balanceada entre protección y movilidad. Preferida por Geralt.
+              </p>
+            </div>
+            <div class="armor-item">
+              <img
+                src="img/armor/bear-school.jpg"
+                alt="Armadura de la Escuela del Oso"
+              />
+              <h4>Escuela del Oso</h4>
+              <p>Pesada y resistente. Ideal para combates cuerpo a cuerpo.</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Sección “Alquimia” -->
     <section id="alchemy" class="section-alchemy">
-        <div class="container">
-            <h2 class="section-title">Pociones y Alquimia</h2>
-            <div class="alchemy-grid">
-                <div class="potion-item">
-                    <div class="potion-icon"><i class="fas fa-flask"></i></div>
-                    <h3>Petri’s Philter</h3>
-                    <p>Aumenta la intensidad de las señales y la duración de los hechizos.</p>
-                    <div class="ingredients">
-                        <span>Berberechos</span>
-                        <span>Membrillo</span>
-                    </div>
-                </div>
-                <div class="potion-item">
-                    <div class="potion-icon"><i class="fas fa-flask"></i></div>
-                    <h3>Swallow</h3>
-                    <p>Regenera la salud gradualmente durante la batalla.</p>
-                    <div class="ingredients">
-                        <span>Diente de león</span>
-                        <span>Celandine</span>
-                    </div>
-                </div>
-                <div class="potion-item">
-                    <div class="potion-icon"><i class="fas fa-bomb"></i></div>
-                    <h3>Dancing Star</h3>
-                    <p>Bomba incendiaria que crea un área de fuego persistente.</p>
-                    <div class="ingredients">
-                        <span>Nitrato de potasio</span>
-                        <span>Mercurio</span>
-                    </div>
-                </div>
-                <div class="potion-item">
-                    <div class="potion-icon"><i class="fas fa-oil-can"></i></div>
-                    <h3>Aceite de Espectro</h3>
-                    <p>Aumenta el daño contra espectros y apariciones.</p>
-                    <div class="ingredients">
-                        <span>Mistletoe</span>
-                        <span>Verbena</span>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Pociones y Alquimia</h2>
+        <div class="alchemy-grid">
+          <div class="potion-item">
+            <div class="potion-icon"><i class="fas fa-flask"></i></div>
+            <h3>Petri’s Philter</h3>
+            <p>
+              Aumenta la intensidad de las señales y la duración de los
+              hechizos.
+            </p>
+            <div class="ingredients">
+              <span>Berberechos</span>
+              <span>Membrillo</span>
             </div>
+          </div>
+          <div class="potion-item">
+            <div class="potion-icon"><i class="fas fa-flask"></i></div>
+            <h3>Swallow</h3>
+            <p>Regenera la salud gradualmente durante la batalla.</p>
+            <div class="ingredients">
+              <span>Diente de león</span>
+              <span>Celandine</span>
+            </div>
+          </div>
+          <div class="potion-item">
+            <div class="potion-icon"><i class="fas fa-bomb"></i></div>
+            <h3>Dancing Star</h3>
+            <p>Bomba incendiaria que crea un área de fuego persistente.</p>
+            <div class="ingredients">
+              <span>Nitrato de potasio</span>
+              <span>Mercurio</span>
+            </div>
+          </div>
+          <div class="potion-item">
+            <div class="potion-icon"><i class="fas fa-oil-can"></i></div>
+            <h3>Aceite de Espectro</h3>
+            <p>Aumenta el daño contra espectros y apariciones.</p>
+            <div class="ingredients">
+              <span>Mistletoe</span>
+              <span>Verbena</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Sección “Bestiario” -->
     <section id="bestiary" class="section-bestiary">
-        <div class="container">
-            <h2 class="section-title">Bestiario</h2>
-            <div class="bestiary-cards">
-                <div class="monster-card">
-                    <img src="img/monsters/gryphon.jpg" alt="Griffin">
-                    <h3>Griffín</h3>
-                    <div class="monster-type">Híbrido</div>
-                    <div class="monster-weaknesses">
-                        <span>Aceite de Híbrido</span>
-                        <span>Igni</span>
-                        <span>Bomba de Samum</span>
-                    </div>
-                </div>
-                <div class="monster-card">
-                    <img src="img/monsters/leshen.jpg" alt="Leshen">
-                    <h3>Leshen</h3>
-                    <div class="monster-type">Espectro</div>
-                    <div class="monster-weaknesses">
-                        <span>Aceite de Espectro</span>
-                        <span>Igni</span>
-                        <span>Yrden</span>
-                    </div>
-                </div>
-                <div class="monster-card">
-                    <img src="img/monsters/vampire.jpg" alt="Bruxa">
-                    <h3>Bruxa</h3>
-                    <div class="monster-type">Vampiro</div>
-                    <div class="monster-weaknesses">
-                        <span>Aceite de Vampiro</span>
-                        <span>Luz de Luna</span>
-                        <span>Aard</span>
-                    </div>
-                </div>
-                <div class="monster-card">
-                    <img src="img/monsters/drowner.jpg" alt="Drowner">
-                    <h3>Drowner</h3>
-                    <div class="monster-type">Necrófago</div>
-                    <div class="monster-weaknesses">
-                        <span>Aceite de Necrófago</span>
-                        <span>Quen</span>
-                        <span>Bomba de Luna</span>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Bestiario</h2>
+        <div class="bestiary-cards">
+          <div class="monster-card">
+            <img src="img/monsters/gryphon.jpg" alt="Griffin" />
+            <h3>Griffín</h3>
+            <div class="monster-type">Híbrido</div>
+            <div class="monster-weaknesses">
+              <span>Aceite de Híbrido</span>
+              <span>Igni</span>
+              <span>Bomba de Samum</span>
             </div>
+          </div>
+          <div class="monster-card">
+            <img src="img/monsters/leshen.jpg" alt="Leshen" />
+            <h3>Leshen</h3>
+            <div class="monster-type">Espectro</div>
+            <div class="monster-weaknesses">
+              <span>Aceite de Espectro</span>
+              <span>Igni</span>
+              <span>Yrden</span>
+            </div>
+          </div>
+          <div class="monster-card">
+            <img src="img/monsters/vampire.jpg" alt="Bruxa" />
+            <h3>Bruxa</h3>
+            <div class="monster-type">Vampiro</div>
+            <div class="monster-weaknesses">
+              <span>Aceite de Vampiro</span>
+              <span>Luz de Luna</span>
+              <span>Aard</span>
+            </div>
+          </div>
+          <div class="monster-card">
+            <img src="img/monsters/drowner.jpg" alt="Drowner" />
+            <h3>Drowner</h3>
+            <div class="monster-type">Necrófago</div>
+            <div class="monster-weaknesses">
+              <span>Aceite de Necrófago</span>
+              <span>Quen</span>
+              <span>Bomba de Luna</span>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Sección “Lore” -->
     <section id="lore" class="section-lore">
-        <div class="container">
-            <h2 class="section-title">Libros y Lore</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-date">1993</div>
-                    <div class="timeline-content">
-                        <h3>El Último Deseo</h3>
-                        <p>Primer libro de la saga, introduce a Geralt, Yennefer y el concepto de la Ley de la Sorpresa.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">1994</div>
-                    <div class="timeline-content">
-                        <h3>La Espada del Destino</h3>
-                        <p>Segunda colección de cuentos donde Geralt conoce a Ciri por primera vez.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">1994–1999</div>
-                    <div class="timeline-content">
-                        <h3>Saga de los Brujos (5 libros)</h3>
-                        <p>La historia principal que sigue las aventuras de Geralt, Ciri y Yennefer.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2007</div>
-                    <div class="timeline-content">
-                        <h3>The Witcher (Videojuego)</h3>
-                        <p>Lanzamiento del primer videojuego desarrollado por CD PROJEKT RED.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2011</div>
-                    <div class="timeline-content">
-                        <h3>The Witcher 2: Assassins of Kings</h3>
-                        <p>Segunda entrega del videojuego que expande la historia de Geralt.</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-date">2015</div>
-                    <div class="timeline-content">
-                        <h3>The Witcher 3: Wild Hunt</h3>
-                        <p>El juego que concluye la historia de Geralt de Rivia y consolida la saga como un fenómeno mundial.</p>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Libros y Lore</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">1993</div>
+            <div class="timeline-content">
+              <h3>El Último Deseo</h3>
+              <p>
+                Primer libro de la saga, introduce a Geralt, Yennefer y el
+                concepto de la Ley de la Sorpresa.
+              </p>
             </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1994</div>
+            <div class="timeline-content">
+              <h3>La Espada del Destino</h3>
+              <p>
+                Segunda colección de cuentos donde Geralt conoce a Ciri por
+                primera vez.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">1994–1999</div>
+            <div class="timeline-content">
+              <h3>Saga de los Brujos (5 libros)</h3>
+              <p>
+                La historia principal que sigue las aventuras de Geralt, Ciri y
+                Yennefer.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2007</div>
+            <div class="timeline-content">
+              <h3>The Witcher (Videojuego)</h3>
+              <p>
+                Lanzamiento del primer videojuego desarrollado por CD PROJEKT
+                RED.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2011</div>
+            <div class="timeline-content">
+              <h3>The Witcher 2: Assassins of Kings</h3>
+              <p>
+                Segunda entrega del videojuego que expande la historia de
+                Geralt.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2015</div>
+            <div class="timeline-content">
+              <h3>The Witcher 3: Wild Hunt</h3>
+              <p>
+                El juego que concluye la historia de Geralt de Rivia y consolida
+                la saga como un fenómeno mundial.
+              </p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Sección “Expansiones” -->
     <section id="expansions" class="section-expansions">
-        <div class="container">
-            <h2 class="section-title">Expansiones</h2>
-            <div class="expansion-cards">
-                <div class="expansion-card">
-                    <img src="img/expansions/hearts-of-stone.jpg" alt="Hearts of Stone">
-                    <div class="expansion-content">
-                        <h3>Hearts of Stone</h3>
-                        <p>Una historia oscura sobre un pacto con el misterioso Gaunter O’Dimm.</p>
-                        <ul>
-                            <li>Nueva región: Norte de Novigrad</li>
-                            <li>Nuevos monstruos y personajes</li>
-                            <li>Sistema de runas mejorado</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="expansion-card">
-                    <img src="img/expansions/blood-and-wine.jpg" alt="Blood and Wine">
-                    <div class="expansion-content">
-                        <h3>Blood and Wine</h3>
-                        <p>Una aventura en el soleado Toussaint, inspirado en el sur de Europa.</p>
-                        <ul>
-                            <li>Nueva región: Toussaint</li>
-                            <li>Nuevo sistema de mutaciones</li>
-                            <li>Más de 30 horas de contenido</li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <h2 class="section-title">Expansiones</h2>
+        <div class="expansion-cards">
+          <div class="expansion-card">
+            <img
+              src="img/expansions/hearts-of-stone.jpg"
+              alt="Hearts of Stone"
+            />
+            <div class="expansion-content">
+              <h3>Hearts of Stone</h3>
+              <p>
+                Una historia oscura sobre un pacto con el misterioso Gaunter
+                O’Dimm.
+              </p>
+              <ul>
+                <li>Nueva región: Norte de Novigrad</li>
+                <li>Nuevos monstruos y personajes</li>
+                <li>Sistema de runas mejorado</li>
+              </ul>
             </div>
+          </div>
+          <div class="expansion-card">
+            <img src="img/expansions/blood-and-wine.jpg" alt="Blood and Wine" />
+            <div class="expansion-content">
+              <h3>Blood and Wine</h3>
+              <p>
+                Una aventura en el soleado Toussaint, inspirado en el sur de
+                Europa.
+              </p>
+              <ul>
+                <li>Nueva región: Toussaint</li>
+                <li>Nuevo sistema de mutaciones</li>
+                <li>Más de 30 horas de contenido</li>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="main-footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="./img/thewitcher/logo/logo-blanco-thewitcher.png" alt="The Witcher Logo">
-                </div>
-                <div class="footer-links">
-                    <h4>Explorar</h4>
-                    <ul>
-                        <li><a href="#universe">Universo</a></li>
-                        <li><a href="#characters">Personajes</a></li>
-                        <li><a href="#weapons">Armas</a></li>
-                        <li><a href="#alchemy">Alquimia</a></li>
-                        <li><a href="#map">Mapa</a></li>
-                        <li><a href="#bestiary">Bestiario</a></li>
-                        <li><a href="#lore">Lore</a></li>
-                        <li><a href="#expansions">Expansiones</a></li>
-                    </ul>
-                </div>
-                <div class="footer-social">
-                    <h4>Seguir</h4>
-                    <div class="social-icons">
-                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
-                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-legal">
-                    <p>The Witcher® es una marca registrada de CD PROJEKT S.A. © CD PROJEKT S.A. Todos los derechos reservados.</p>
-                    <p>Este sitio es un proyecto fan-made sin fines de lucro.</p>
-                </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img
+              src="./img/thewitcher/logo/logo-blanco-thewitcher.png"
+              alt="The Witcher Logo"
+            />
+          </div>
+          <div class="footer-links">
+            <h4>Explorar</h4>
+            <ul>
+              <li><a href="#universe">Universo</a></li>
+              <li><a href="#characters">Personajes</a></li>
+              <li><a href="#weapons">Armas</a></li>
+              <li><a href="#alchemy">Alquimia</a></li>
+              <li><a href="#map">Mapa</a></li>
+              <li><a href="#bestiary">Bestiario</a></li>
+              <li><a href="#lore">Lore</a></li>
+              <li><a href="#expansions">Expansiones</a></li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <h4>Seguir</h4>
+            <div class="social-icons">
+              <a href="#" aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
+          </div>
+          <div class="footer-legal">
+            <p>
+              The Witcher® es una marca registrada de CD PROJEKT S.A. © CD
+              PROJEKT S.A. Todos los derechos reservados.
+            </p>
+            <p>Este sitio es un proyecto fan-made sin fines de lucro.</p>
+          </div>
         </div>
+      </div>
     </footer>
 
     <!-- Botón “Volver arriba” -->
     <button id="scroll-to-top" class="scroll-to-top">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
 
     <!-- Scripts externos -->
-     <!-- <script src="./js/gsap.min.js"></script>
+    <!-- <script src="./js/gsap.min.js"></script>
      <script src="./js/ScrollTrigger.min.js"></script> -->
-     <!-- <script src="./js/animaciones-thewitcher.js"></script> -->
-     <script src="./js/funcionalidad-thewitcher.js"></script>
-
-    
-</body>
+    <!-- <script src="./js/animaciones-thewitcher.js"></script> -->
+    <script src="./js/funcionalidad-thewitcher.js"></script>
+  </body>
 </html>
