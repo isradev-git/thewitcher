@@ -8,7 +8,7 @@
 */
 
 /* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
 /* ----------------------------------
    Variables CSS (colores, tipografías)
@@ -26,8 +26,8 @@
   --text-gray: #aaaaaa;
 
   /* Tipografías */
-  --font-title: 'Cinzel', serif;
-  --font-body: 'Roboto', sans-serif;
+  --font-title: "Cinzel", serif;
+  --font-body: "Roboto", sans-serif;
 
   /* Transiciones */
   --transition-fast: 0.2s ease;
@@ -124,7 +124,7 @@ button {
 .witcher-symbol {
   width: 100px;
   height: 100px;
-  background: url('../images/logo/wolf-logo-white.png') no-repeat center center;
+  background: url("../images/logo/wolf-logo-white.png") no-repeat center center;
   background-size: contain;
   animation: spin 4s infinite linear;
 }
@@ -138,7 +138,6 @@ button {
     transform: rotate(360deg);
   }
 }
-
 
 /* ===========================
    HEADER (Video de fondo, logo, nav)
@@ -243,7 +242,7 @@ section {
 }
 
 .section-title::after {
-  content: '';
+  content: "";
   display: block;
   width: 60px;
   height: 4px;
@@ -300,7 +299,7 @@ section {
   align-items: stretch;
   margin-top: 20px;
 } */
- .characters-grid {
+.characters-grid {
   display: grid;
   /* gap: 24px; */
   row-gap: 24px;
@@ -309,6 +308,8 @@ section {
 
   /* Móvil: quepan tantas de 220px como aguante */
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  justify-content: center;
+  justify-items: center;
 }
 
 /* A partir de 960px de ancho, forzamos siempre 4 columnas */
@@ -363,19 +364,23 @@ section {
 .wrapper::before {
   top: 0;
   height: 100%;
-  background-image: linear-gradient(to top,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%);
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
 }
 
 .wrapper::after {
   bottom: 0;
   opacity: 1;
-  background-image: linear-gradient(to bottom,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
 }
 
 .card:hover .wrapper::before,
@@ -464,7 +469,8 @@ section {
   justify-content: center;
   cursor: pointer;
   z-index: 5;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition: background-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .carousel-arrow:hover {
@@ -494,7 +500,8 @@ section {
   box-sizing: border-box;
   padding: 0 8px;
   opacity: 0.5;
-  transition: opacity var(--transition-medium), transform var(--transition-medium);
+  transition: opacity var(--transition-medium),
+    transform var(--transition-medium);
 }
 
 .carousel-item img {
@@ -603,10 +610,6 @@ section {
     padding: 0 4px;
   }
 }
-
-
-
-
 
 /* ===========================
    RESPONSIVE (Ajustes para móviles)
