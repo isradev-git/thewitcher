@@ -37,7 +37,7 @@
   --shadow-red: rgba(224, 62, 62, 0.4);
 
   /* Tarjetas de personajes */
-  --card-height: 300px;
+  --card-height: 320px; /*300px original*/
   --card-width: calc(var(--card-height) / 1.5);
 }
 
@@ -85,7 +85,7 @@ button {
 /* Contenedor centrado */
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px; /*1200 original*/
   margin: 0 auto;
 }
 
@@ -290,39 +290,22 @@ section {
 .section-characters {
   background-color: var(--darker-bg);
 }
-
-/* Grid responsivo: tarjetas una junto a otra */
-/* .characters-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 24px;
-  align-items: stretch;
-  margin-top: 20px;
-} */
-.characters-grid {
-  display: grid;
-  /* gap: 24px; */
-  row-gap: 24px;
-  align-items: stretch;
-  margin-top: 20px;
-
-  /* Móvil: quepan tantas de 220px como aguante */
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+.characters-flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px; /*24px ORIGINAL*/
   justify-content: center;
-  justify-items: center;
+  align-items: stretch;
+  margin-top: 20px;
 }
-
-/* A partir de 960px de ancho, forzamos siempre 4 columnas */
-@media (min-width: 960px) {
-  .characters-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}
-@media (min-width: 450px) {
-  .characters-grid {
-    grid-template-columns: repeat(1fr);
+.character-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    align-items: stretch;
     row-gap: 50px;
-  }
 }
 
 .card {
