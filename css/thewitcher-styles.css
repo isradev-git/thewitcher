@@ -7,9 +7,17 @@
    gráfica de The Witcher 3.
 */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); */
+/* Importación fuente google Cinzel & Roboto*/
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-
+/* Importaciones de fuentes locales */
+@font-face {
+  font-family: 'thewitcher-title';
+  src: url('../font/Thewitcher-jnOj.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'thewitcher-text';
+  src: url('../font/PFDinTextCondPro-Regular.ttf') format('truetype');
+}
 /* ----------------------------------
    Variables CSS (colores, tipografías)
 ------------------------------------- */
@@ -25,9 +33,13 @@
   --text-light: #dddddd;
   --text-gray: #aaaaaa;
 
+  /* Tipografia TheWitcher Nueva */
+  --font-title-new: 'thewitcher-title', sans-serif;
+  --font-text-new: 'thewitcher-text', sans-serif;
   /* Tipografías */
   --font-title: "Cinzel", serif;
   --font-body: "Roboto", sans-serif;
+
 
   /* Transiciones */
   --transition-fast: 0.2s ease;
@@ -56,7 +68,8 @@ body {
   height: 100%;
   background-color: var(--black);
   color: var(--text-white);
-  font-family: var(--font-body);
+  /* font-family: var(--font-body); ORIGINAL*/
+  font-family: var(--font-text-new);
   overflow-x: hidden;
 }
 
@@ -79,7 +92,7 @@ button {
   outline: none;
   border: none;
   cursor: pointer;
-  font-family: var(--font-body);
+  font-family: var(--font-text-new);
 }
 
 /* Contenedor centrado */
@@ -233,7 +246,7 @@ section {
 }
 
 .section-title {
-  font-family: var(--font-title);
+  font-family: var(--font-title-new);
   font-size: 2.5rem;
   color: var(--accent-red);
   text-align: center;
@@ -277,8 +290,10 @@ section {
 }
 
 .universe-text .typing-effect {
-  font-family: var(--font-title);
-  font-size: 1.1rem;
+  /* font-family: var(--font-title); ORIGINAL*/
+  font-family: var(--font-text-new);
+  /* font-size: 1.1rem; ORIGINAL */
+  font-size: 1.3rem;
   line-height: 1.6;
   /* white-space: pre-wrap; */
   letter-spacing: 0.5px;
@@ -423,7 +438,7 @@ section {
 }
 
 .section-location .section-description {
-  font-family: var(--font-body);
+  font-family: var(--font-text-new);
   font-size: 1.05rem;
   color: var(--text-light);
   text-align: center;
@@ -524,13 +539,42 @@ section {
 }
 
 #location-description {
-  font-family: var(--font-body);
+  font-family: var(--font-text-new);
   font-size: 1rem;
   color: var(--text-light);
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.5;
 }
+
+/* ==============================
+   Iframe oculto banda sonora
+   ============================== */
+#spotify-container {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  left: -10000px; top: -10000px;
+}
+
+.sound-button {
+  position: fixed;
+  bottom: 20px; left: 20px;
+  width: 50px; height: 50px;
+  border: none;
+  background: #ffffffcc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.sound-button i {
+  font-size: 24px;
+  pointer-events: none;
+}
+
 
 /* ==============================
    Responsive

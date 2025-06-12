@@ -182,3 +182,42 @@ document.addEventListener('DOMContentLoaded', () => {
   // Inicializar el carrusel
   updateCarousel();
 });
+
+// --------------------------------------------------------------
+// 5. Funcionalidad para el botón de sonido en el iframe de Spotify
+// --------------------------------------------------------------
+// Pon esto **antes** de cargar el iframe-API de Spotify
+['warn','error'].forEach(level => {
+  const origen = console[level].bind(console);
+  console[level] = (msg, ...rest) => {
+    if (typeof msg === 'string' && msg.includes('robustness level')) {
+      return;
+    }
+    origen(msg, ...rest);
+  };
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const iframe = document.getElementById('spotify-iframe');
+  const btn    = document.getElementById('sound-toggle');
+  let playing  = false;
+
+  // 1) Habilita el botón cuando el iframe haya cargado
+  iframe.addEventListener('load', () => {
+    btn.disabled = false;
+  });
+
+  // 2) Al hacer clic, envía el comando 'toggle' y cambia el icono
+  btn.addEventListener('click', () => {
+    iframe.contentWindow.postMessage(
+      { command: 'toggle' },
+      'https://open.spotify.com'  // restringe el targetOrigin
+    );                           // :contentReference[oaicite:0]{index=0}
+
+    playing = !playing;
+    btn.innerHTML = playing
+      ? '<i class="fas fa-bell-slash"></i>'
+      : '<i class="fas fa-bell"></i>';
+  });
+});
+

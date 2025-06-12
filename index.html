@@ -62,12 +62,18 @@
       <div class="universe-content">
         <div class="universe-text">
           <p class="typing-effect">
-            En el Norte devastado por la guerra, donde los reinos luchan por
-            sobrevivir contra el avance implacable de Nilfgaard, Geralt de
-            Rivia, el legendario brujo, busca a su hija adoptiva Ciri, la
-            Chica de la Profecía. Su viaje lo llevará a través de vastos
-            territorios, enfrentando monstruos, intrigas políticas y fuerzas
-            sobrenaturales que amenazan con sumir al mundo en el caos…
+            Adéntrate en un Norte desgarrado por la guerra, donde los reinos, agotados y sumidos en la desconfianza,
+            tratan de contener el avance implacable de Nilfgaard. En este escenario al borde del abismo, habitan héroes
+            y antihéroes, brujos y hechiceras, bestias de pesadilla y hombres corrompidos por el poder. Cada pueblo,
+            cada castillo y cada camino olvidado esconde secretos oscuros tan profundos como los ríos que atraviesan
+            estas tierras…
+
+            En el corazón de este mundo, Geralt de Rivia —el brujo de cabellos de luna y ojos de gato— recorre sendas
+            condenadas al filo de la espada, cumpliendo contratos que lo enfrentan a criaturas antiguas y a la propia
+            naturaleza humana. A su lado, Yennefer de Vengerberg teje intrigas de poder en los salones de la nobleza, y
+            Ciri, la Chica de la Profecía, porta en su sangre el destino de todo el Continente. Intrigas políticas,
+            pactos con las órdenes de magos y el peligro latente de fuerzas sobrenaturales conforman un tapiz de
+            traiciones y redenciones…
           </p>
           <!-- <p class="typing-effect">
 El Continente de The Witcher se formó tras la Conjunción de las Esferas, un evento mágico que trajo monstruos y conectó mundos. Los reinos humanos del Norte se erigieron sobre antiguos dominios élficos y luchan entre sí mientras resisten al Imperio de Nilfgaard, al sur, que ansía la conquista con su ejército disciplinado. Las campañas bélicas generan intrigas palaciegas, traiciones y alianzas temporales. En academias como Aretuza y Oxenfurt, magos y hechiceras generan pactos que influyen en reinos. Los brujos de Kaer Morhen, mutados para cazar criaturas sobrenaturales —espectros, trasgos, wendigos— recorren bosques, pantanos y ruinas para proteger poblados, manteniendo neutralidad en asuntos humanos. En ciudades y puertos, mercaderes, espías y bandidos comercian desde hierbas mágicas hasta esclavos, mientras elfos desplazados luchan en guerrillas Scoia’tael para recuperar su legado. Este mundo combina tensiones bélicas, política y un bestiario surgido de antiguas leyendas y misterios.
@@ -91,7 +97,6 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
                 <img src="./images/personajes/geralt.png" cover-image" />
               </div>
               <img src="./images/personajes/geralt-titulo.png" class="title" />
-              <!-- <img src="./images/personajes/geralt-silueta.png"class="character" /> -->
               <img src="./images/personajes/geralt-silueta.png" class="character" />
             </div>
           </a>
@@ -525,10 +530,24 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
     </div>
   </footer>
 
-  <!-- Botón “Volver arriba” -->
-  <button id="scroll-to-top" class="scroll-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
+<!-- contenedor oculto para el iframe -->
+<div id="spotify-container">
+  <iframe
+    id="spotify-iframe"
+    src="https://open.spotify.com/embed/playlist/4CNxMIKMPGDc8mCaaRqXqd?utm_source=generator&theme=0"
+    width="1" height="1"
+    frameborder="0"
+    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture"
+    loading="lazy">
+  </iframe>
+</div>
+
+<!-- botón visible abajo-izq -->
+<button id="sound-toggle" class="sound-button" disabled>
+  <i class="fas fa-bell"></i>
+</button>
+
+
 
   <!-- Scripts externos -->
   <!-- <script src="./js/gsap.min.js"></script>
