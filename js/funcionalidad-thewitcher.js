@@ -187,33 +187,42 @@ document.addEventListener('DOMContentLoaded', () => {
 // 5. Funcionalidad para el botón de sonido en el iframe de Spotify
 // --------------------------------------------------------------
 // Pon esto **antes** de cargar el iframe-API de Spotify
-['warn','error'].forEach(level => {
-  const origen = console[level].bind(console);
-  console[level] = (msg, ...rest) => {
-    if (typeof msg === 'string' && msg.includes('robustness level')) {
-      return;
-    }
-    origen(msg, ...rest);
-  };
-});
+// ['warn','error'].forEach(level => {
+//   const origen = console[level].bind(console);
+//   console[level] = (msg, ...rest) => {
+//     if (typeof msg === 'string' && msg.includes('robustness level')) {
+//       return;
+//     }
+//     origen(msg, ...rest);
+//   };
+// });
 
 document.addEventListener('DOMContentLoaded', () => {
   const iframe = document.getElementById('spotify-iframe');
   const btn    = document.getElementById('sound-toggle');
   let playing  = false;
 
-  // 1) Habilita el botón cuando el iframe haya cargado
-  iframe.addEventListener('load', () => {
-    btn.disabled = false;
-  });
+  function enableButton() {
+    if (btn.disabled) {
+      btn.disabled = false;
+      console.log('[Spotify] iframe cargado → botón habilitado');
+    }
+  }
 
-  // 2) Al hacer clic, envía el comando 'toggle' y cambia el icono
+  // 1) Si ya está completado, habilita ya; sino, espera al load
+  if (iframe.readyState === 'complete' || iframe.complete) {
+    enableButton();
+  } else {
+    iframe.addEventListener('load', enableButton);
+  }
+
+  // 2) Click → postMessage + toggle icono
   btn.addEventListener('click', () => {
+    console.log('[Spotify] click → toggle');
     iframe.contentWindow.postMessage(
       { command: 'toggle' },
-      'https://open.spotify.com'  // restringe el targetOrigin
-    );                           // :contentReference[oaicite:0]{index=0}
-
+      'https://open.spotify.com'
+    );
     playing = !playing;
     btn.innerHTML = playing
       ? '<i class="fas fa-bell-slash"></i>'
