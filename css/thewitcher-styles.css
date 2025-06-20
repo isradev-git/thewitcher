@@ -9,15 +9,18 @@
 
 /* Importación fuente google Cinzel & Roboto*/
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 /* Importaciones de fuentes locales */
 @font-face {
   font-family: 'thewitcher-title';
   src: url('../font/Thewitcher-jnOj.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'thewitcher-text';
   src: url('../font/PFDinTextCondPro-Regular.ttf') format('truetype');
 }
+
 /* ----------------------------------
    Variables CSS (colores, tipografías)
 ------------------------------------- */
@@ -49,7 +52,8 @@
   --shadow-red: rgba(224, 62, 62, 0.4);
 
   /* Tarjetas de personajes */
-  --card-height: 320px; /*300px original*/
+  --card-height: 320px;
+  /*300px original*/
   --card-width: calc(var(--card-height) / 1.5);
 }
 
@@ -98,7 +102,8 @@ button {
 /* Contenedor centrado */
 .container {
   width: 90%;
-  max-width: 1400px; /*1200 original*/
+  max-width: 1400px;
+  /*1200 original*/
   margin: 0 auto;
 }
 
@@ -305,22 +310,25 @@ section {
 .section-characters {
   background-color: var(--darker-bg);
 }
+
 .characters-flex {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px; /*24px ORIGINAL*/
+  gap: 50px;
+  /*24px ORIGINAL*/
   justify-content: center;
   align-items: stretch;
   margin-top: 20px;
 }
+
 .character-row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
-    align-items: stretch;
-    row-gap: 50px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  align-items: stretch;
+  row-gap: 50px;
 }
 
 .card {
@@ -369,23 +377,19 @@ section {
 .wrapper::before {
   top: 0;
   height: 100%;
-  background-image: linear-gradient(
-    to top,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
+  background-image: linear-gradient(to top,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
 }
 
 .wrapper::after {
   bottom: 0;
   opacity: 1;
-  background-image: linear-gradient(
-    to bottom,
-    transparent 46%,
-    rgba(12, 13, 19, 0.5) 68%,
-    rgba(12, 13, 19) 97%
-  );
+  background-image: linear-gradient(to bottom,
+      transparent 46%,
+      rgba(12, 13, 19, 0.5) 68%,
+      rgba(12, 13, 19) 97%);
 }
 
 .card:hover .wrapper::before,
@@ -418,6 +422,70 @@ section {
   opacity: 1;
   transform: translate3d(0%, -30%, 100px);
 }
+
+/* + Botón para ver página de personajes */
+.button-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+
+.cssbuttons-io-button {
+  background: var(--accent-red);
+  color: white;
+  font-family: inherit;
+  padding: 0.35em;
+  padding-left: 1.2em;
+  font-size: 17px;
+  font-weight: 500;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  box-shadow: inset 0 0 1.6em -0.6em var(--accent-red);
+  overflow: hidden;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.cssbuttons-io-button .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.2em;
+  width: 2.2em;
+  border-radius: 0.7em;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em var(--accent-red);
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.cssbuttons-io-button:hover .icon {
+  width: calc(100% - 0.6em);
+}
+
+.cssbuttons-io-button .icon svg {
+  width: 1.1em;
+  transition: transform 0.3s;
+  color: var(--accent-red);
+}
+
+.cssbuttons-io-button:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.cssbuttons-io-button:active .icon {
+  transform: scale(0.95);
+}
+
+/* - Botón para ver página de personajes */
 
 /* ==============================
    Sección “Localizaciones”
@@ -526,7 +594,7 @@ section {
 /* ==============================
    Información de la Localización Activa
    ============================== */
-.carousel-info {
+/* .carousel-info {
   margin-top: 24px;
   text-align: center;
 }
@@ -545,29 +613,39 @@ section {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.5;
-}
+} */
 
 /* ==============================
    Iframe oculto banda sonora
    ============================== */
 #spotify-container {
   position: absolute;
-  width: 1px; height: 1px;
+  width: 1px;
+  height: 1px;
   overflow: hidden;
-  left: -10000px; top: -10000px;
+  left: -10000px;
+  top: -10000px;
 }
 
 .sound-button {
   position: fixed;
-  bottom: 20px; left: 20px;
-  width: 50px; height: 50px;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
   border: none;
   background: #ffffffcc;
   border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   z-index: 1000;
+}
+.sound-button:hover {
+  background: var(--accent-red);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .sound-button i {
