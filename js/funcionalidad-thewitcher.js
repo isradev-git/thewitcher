@@ -115,88 +115,62 @@ if (universeText) {
 }
 
 // --------------------------------------------------------------
-// 4. animaciones-localizaciones.js
+// 4. Funcionalidad del carrousel
 // --------------------------------------------------------------
+let nextDom = document.getElementById('next');
+let prevDom = document.getElementById('prev');
 
-document.addEventListener('DOMContentLoaded', () => {
-  // Referencias a elementos del DOM
-  const track = document.querySelector('.carousel-track');
-  const items = Array.from(track.querySelectorAll('.carousel-item'));
-  const prevButton = document.querySelector('.carousel-prev');
-  const nextButton = document.querySelector('.carousel-next');
-  const titleEl = document.getElementById('location-title');
-  const descEl = document.getElementById('location-description');
+let carouselDom = document.querySelector('.carousel');
+let SliderDom = carouselDom.querySelector('.carousel .list');
+let thumbnailBorderDom = document.querySelector('.carousel .thumbnail');
+let thumbnailItemsDom = thumbnailBorderDom.querySelectorAll('.item');
+let timeDom = document.querySelector('.carousel .time');
 
-  // Índice de la imagen actualmente activa
-  let currentIndex = 0;
+thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+// let timeRunning = 3000 ORIGINAL VALOR;
+// let timeAutoNext = 7000 ORIGINAL VALOR;
+let timeRunning = 1000; //Con 0 va bien, pero no da tiempo a que se vea el cambio de imagen
+let timeAutoNext = 16000;
 
-  // Calcula y devuelve el ancho de cada item (en píxeles)
-  function getItemWidth() {
-    // Cada .carousel-item está configurado para ocupar el 100% del contenedor padre,
-    // con padding horizontal. Tomamos el ancho real del track y lo dividimos por 1,
-    // o bien tomamos directamente el ancho del primer item.
-    return items[0].getBoundingClientRect().width;
-  }
+nextDom.onclick = function(){
+    showSlider('next');    
+}
 
-  // Función que actualiza la posición del track y la información (título/descr.)
-  function updateCarousel() {
-    const itemWidth = getItemWidth();
-    // Desplazamos el track: cada índice mueve el contenedor hacia la izquierda
-    track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+prevDom.onclick = function(){
+    showSlider('prev');    
+}
+let runTimeOut;
+let runNextAuto = setTimeout(() => {
+    next.click();
+}, timeAutoNext)
+function showSlider(type){
+    let  SliderItemsDom = SliderDom.querySelectorAll('.carousel .list .item');
+    let thumbnailItemsDom = document.querySelectorAll('.carousel .thumbnail .item');
+    
+    if(type === 'next'){
+        SliderDom.appendChild(SliderItemsDom[0]);
+        thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
+        carouselDom.classList.add('next');
+    }else{
+        SliderDom.prepend(SliderItemsDom[SliderItemsDom.length - 1]);
+        thumbnailBorderDom.prepend(thumbnailItemsDom[thumbnailItemsDom.length - 1]);
+        carouselDom.classList.add('prev');
+    }
+    clearTimeout(runTimeOut);
+    runTimeOut = setTimeout(() => {
+        carouselDom.classList.remove('next');
+        carouselDom.classList.remove('prev');
+    }, timeRunning);
 
-    // Ajustar clases .active
-    items.forEach((item, idx) => {
-      if (idx === currentIndex) {
-        item.classList.add('active');
-      } else {
-        item.classList.remove('active');
-      }
-    });
-
-    // Leer atributos data-* del ítem activo y actualizar título/descr.
-    const activeItem = items[currentIndex];
-    const newTitle = activeItem.dataset.title || '';
-    const newDescription = activeItem.dataset.description || '';
-
-    titleEl.textContent = newTitle;
-    descEl.textContent = newDescription;
-  }
-
-  // Evento para botón “Anterior”
-  prevButton.addEventListener('click', () => {
-    currentIndex = (currentIndex === 0) ? items.length - 1 : currentIndex - 1;
-    updateCarousel();
-  });
-
-  // Evento para botón “Siguiente”
-  nextButton.addEventListener('click', () => {
-    currentIndex = (currentIndex === items.length - 1) ? 0 : currentIndex + 1;
-    updateCarousel();
-  });
-
-  // Recalcular posición al redimensionar ventana (para pantallas responsive)
-  window.addEventListener('resize', () => {
-    updateCarousel();
-  });
-
-  // Inicializar el carrusel
-  updateCarousel();
-});
+    clearTimeout(runNextAuto);
+    runNextAuto = setTimeout(() => {
+        next.click();
+    }, timeAutoNext)
+}
 
 // --------------------------------------------------------------
-// 5. Funcionalidad para el botón de sonido en el iframe de Spotify
+// 6. Funcionalidad para el botón de sonido en el iframe de Spotify
 // --------------------------------------------------------------
-// Pon esto **antes** de cargar el iframe-API de Spotify
-// ['warn','error'].forEach(level => {
-//   const origen = console[level].bind(console);
-//   console[level] = (msg, ...rest) => {
-//     if (typeof msg === 'string' && msg.includes('robustness level')) {
-//       return;
-//     }
-//     origen(msg, ...rest);
-//   };
-// });
-
 document.addEventListener('DOMContentLoaded', () => {
   const iframe = document.getElementById('spotify-iframe');
   const btn    = document.getElementById('sound-toggle');
