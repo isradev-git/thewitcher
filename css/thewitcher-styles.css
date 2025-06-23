@@ -533,7 +533,7 @@ section {
   text-shadow: 0 5px 10px #0004;
 }
 
-.carousel .list .item .author {
+.carousel .list .item .tipo {
   font-weight: bold;
   letter-spacing: 10px;
 }
@@ -645,7 +645,7 @@ section {
 
 /* animation text in first item */
 
-.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .tipo,
 .carousel .list .item:nth-child(1) .content .title,
 .carousel .list .item:nth-child(1) .content .topic,
 .carousel .list .item:nth-child(1) .content .des,
@@ -762,7 +762,7 @@ section {
   pointer-events: none;
 }
 
-.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .tipo,
 .carousel.prev .list .item:nth-child(2) .content .title,
 .carousel.prev .list .item:nth-child(2) .content .topic,
 .carousel.prev .list .item:nth-child(2) .content .des,
