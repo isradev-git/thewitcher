@@ -472,6 +472,7 @@ section {
   transition: all 0.5s;
   position: absolute;
   z-index: -1;
+  margin-bottom: -30px; /*Pendiente de pruebas*/
 }
 
 .card:hover .character {
