@@ -779,6 +779,9 @@ section {
 }
 
 @media screen and (max-width: 678px) {
+  .carousel {
+    height: 100vh;
+  }
   .carousel .list .item .content {
     padding-right: 0;
   }
