@@ -1,33 +1,105 @@
-Sección de personajes [AÑADIR]:
+Sección de personajes [AÑADIDO]:
 🧙‍♂️ Los 8 personajes más importantes de The Witcher (libros)
-Geralt de Rivia-
+Geralt de Rivia--*
 
 El protagonista absoluto. Brujo, cazador de monstruos, figura central en todos los eventos de la saga.
 
-Ciri (Cirilla Fiona Elen Riannon)-
+Ciri (Cirilla Fiona Elen Riannon)--*
 
 Hija del destino. Su linaje, poderes y decisiones son clave para el futuro del continente.
 
-Yennefer de Vengerberg-
+Yennefer de Vengerberg--*
 
 Hechicera poderosa, madre adoptiva de Ciri, y gran amor de Geralt. Vital en la evolución de ambos.
 
-Jaskier (Dandelion)-
-
-Mejor amigo de Geralt, bardo famoso. Testigo y narrador de muchas historias clave.
-
-Triss Merigold-
+Triss Merigold--*
 
 Hechicera y amiga cercana del trío principal. Juega un papel importante en la saga, aunque menor que Yennefer.
 
-Vesemir-
+Jaskier (Dandelion)--*
+
+Mejor amigo de Geralt, bardo famoso. Testigo y narrador de muchas historias clave.
+
+Vesemir--*
 
 Mentor de Geralt en Kaer Morhen. Representa el legado de los brujos y la figura paterna del protagonista.
 
-Emhyr var Emreis-
+Emhyr var Emreis--*
 
 Emperador de Nilfgaard. Figura central en el conflicto político y con vínculos profundos con Ciri.
 
-Vilgefortz de Roggeveen-
+Vilgefortz de Roggeveen--
 
 Uno de los antagonistas principales. Hechicero traicionero, poderoso y ambicioso, representa una gran amenaza para Geralt y Ciri.
+
+
+
+
+
+
+
+Sección de localizaciones [AÑADIR]:
+--------------------------------------------------------------------------------------
+
+1. Kaer Morhen
+Tipo: Fortaleza
+
+Ubicación: Montes Azules (reino de Kaedwen)
+
+Importancia:
+
+Es la antigua fortaleza de los brujos de la Escuela del Lobo, donde Geralt fue entrenado.
+
+Funciona como base de operaciones y lugar clave para varios personajes importantes como Vesemir, Lambert o Eskel.
+
+En The Witcher 3, es el lugar de una batalla crucial contra la Cacería Salvaje.
+
+Curiosidad: Su nombre proviene del élfico “Caer a’Muirehen” (“Fortaleza del Mar Viejo”).
+
+--------------------------------------------------------------------------------------
+
+2. Cintra
+Tipo: Reino
+
+Importancia en la trama:
+
+Es el reino natal de Ciri, y su caída a manos del Imperio de Nilfgaard marca el inicio del conflicto principal de la saga.
+
+La reina Calanthe, abuela de Ciri, es una figura clave en la política norteña.
+
+El famoso “Derecho de la Sorpresa” que une a Geralt con Ciri se origina en Cintra.
+
+Presente en: El Último Deseo, La Espada del Destino, La Sangre de los Elfos.
+
+--------------------------------------------------------------------------------------
+
+3. Temeria (y Wyzima como capital destacada)
+Tipo: Reino
+
+Importancia en la trama:
+
+Uno de los reinos más poderosos del norte.
+
+Wyzima, su capital, es el escenario de historias clave como la del estrige (Adda), y lugar donde Geralt y Triss colaboran con el rey Foltest.
+
+Temeria está en constante tensión por su ubicación entre Redania y Nilfgaard.
+
+Presente en: El Último Deseo, La Sangre de los Elfos, Tiempo de odio.
+
+--------------------------------------------------------------------------------------
+
+4. Aretuza (Isla de Thanedd)
+Tipo: Escuela de hechiceras / centro político-mágico
+
+Importancia en la trama:
+
+Es el lugar donde se forman las magas del Continente, como Yennefer.
+
+En la Reunión de Thanedd, ocurre un golpe de Estado que divide a las hechiceras y desencadena una guerra entre las facciones mágicas.
+
+Es un punto de inflexión en la saga: alianzas, traiciones y la fuga de Ciri.
+
+Presente en: Tiempo de odio, Bautismo de fuego.
+
+--------------------------------------------------------------------------------------
+

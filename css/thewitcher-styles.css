@@ -549,6 +549,9 @@ section {
 .carousel .list .item .topic {
   color: var(--accent-red-dark);
 }
+.carousel .list .item .des {
+  font-size: 18px;
+}
 
 .carousel .list .item .buttons {
   display: grid;
