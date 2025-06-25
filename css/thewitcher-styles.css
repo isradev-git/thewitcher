@@ -623,14 +623,15 @@ section {
 }
 
 .arrows button {
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
-  background-color: #eee4;
+  background-color: rgba(238, 238, 238, 0.733);
   border: none;
-  color: #fff;
+  color: var(--accent-red);
   font-family: monospace;
   font-weight: bold;
+  font-size: 20px;
   transition: .5s;
 }
 
@@ -688,7 +689,7 @@ section {
   position: absolute;
   bottom: 50px;
   left: 50%;
-  border-radius: 30px;
+  /* border-radius: 30px; */
   animation: showImage .5s linear 1 forwards;
 }
 
@@ -748,7 +749,7 @@ section {
     height: 220px;
     bottom: 50px;
     left: 50%;
-    border-radius: 20px;
+    /* border-radius: 20px; */
   }
 }
 
