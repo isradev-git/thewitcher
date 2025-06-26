@@ -555,7 +555,8 @@ section {
 
 .carousel .list .item .buttons {
   display: grid;
-  grid-template-columns: repeat(2, 130px);
+  /* grid-template-columns: repeat(2, 130px); */
+  grid-template-columns: repeat(2, 160px);
   grid-template-rows: 40px;
   gap: 5px;
   margin-top: 20px;
@@ -569,9 +570,14 @@ section {
   font-weight: 500;
 }
 
-.carousel .list .item .buttons button:nth-child(2) {
+/* .carousel .list .item .buttons button:nth-child(2) --------> ORIGINAL{
   background-color: transparent;
   border: 1px solid #fff;
+  color: #eee;
+} */
+.carousel .list .item .buttons button:nth-child(2) {
+  background-color: var(--accent-red-dark);
+  /* border: 1px solid #fff; */
   color: #eee;
 }
 
@@ -799,44 +805,80 @@ section {
 /* - Carrousel completo para localizaciones y zonas interesantes del juego */
 
 
-
 /* ==============================
    Iframe oculto banda sonora
    ============================== */
 #spotify-container {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  left: -10000px;
-  top: -10000px;
+  width: 100px; /* Mantén un tamaño mínimo */
+  height: 100px; /* Mantén un tamaño mínimo */
+  opacity: 0; /* Lo hace completamente transparente */
+  pointer-events: none; /* Desactiva interacciones directas */
+  z-index: -1; /* Envía el iframe detrás de otros elementos */
+  clip: rect(0, 0, 0, 0); /* Asegura que el iframe no sea visible */
+  clip-path: inset(100%); /* Otra capa de seguridad para ocultarlo */
 }
 
+/* ==============================
+   Botón de control de sonido
+   ============================== */
 .sound-button {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  width: 50px;
-  height: 50px;
-  border: none;
-  background: #ffffffcc;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  z-index: 1000;
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    background: #ffffffcc;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+    padding: 0;
+    margin: 0;
+    outline: none;
 }
 
-.sound-button:hover {
-  background: var(--accent-red);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+.sound-button:hover, 
+.sound-button:focus {
+    background: #ff4757;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+.sound-button:active {
+    transform: scale(0.98);
 }
 
 .sound-button i {
-  font-size: 24px;
-  pointer-events: none;
+    font-size: 24px;
+    color: #333;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.sound-button:hover i,
+.sound-button:focus i {
+    color: #fff;
+}
+
+.sound-button[disabled] {
+    opacity: 0.7;
+    cursor: not-allowed;
+    background: #cccccc;
+}
+
+.sound-button[disabled]:hover {
+    background: #cccccc;
+    transform: none;
+}
+
+.sound-button[disabled] i {
+    color: #666666;
 }
 
 

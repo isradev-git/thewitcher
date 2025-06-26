@@ -1,44 +1,4 @@
-Sección de personajes [AÑADIDO]:
-🧙‍♂️ Los 8 personajes más importantes de The Witcher (libros)
-Geralt de Rivia--*
-
-El protagonista absoluto. Brujo, cazador de monstruos, figura central en todos los eventos de la saga.
-
-Ciri (Cirilla Fiona Elen Riannon)--*
-
-Hija del destino. Su linaje, poderes y decisiones son clave para el futuro del continente.
-
-Yennefer de Vengerberg--*
-
-Hechicera poderosa, madre adoptiva de Ciri, y gran amor de Geralt. Vital en la evolución de ambos.
-
-Triss Merigold--*
-
-Hechicera y amiga cercana del trío principal. Juega un papel importante en la saga, aunque menor que Yennefer.
-
-Jaskier (Dandelion)--*
-
-Mejor amigo de Geralt, bardo famoso. Testigo y narrador de muchas historias clave.
-
-Vesemir--*
-
-Mentor de Geralt en Kaer Morhen. Representa el legado de los brujos y la figura paterna del protagonista.
-
-Emhyr var Emreis--*
-
-Emperador de Nilfgaard. Figura central en el conflicto político y con vínculos profundos con Ciri.
-
-Vilgefortz de Roggeveen--
-
-Uno de los antagonistas principales. Hechicero traicionero, poderoso y ambicioso, representa una gran amenaza para Geralt y Ciri.
-
-
-
-
-
-
-
-Sección de localizaciones [AÑADIR]:
+Sección de localizaciones [AÑADIDO]:
 --------------------------------------------------------------------------------------
 
 1. Kaer Morhen
@@ -102,4 +62,104 @@ Es un punto de inflexión en la saga: alianzas, traiciones y la fuga de Ciri.
 Presente en: Tiempo de odio, Bautismo de fuego.
 
 --------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------
+[VANTA]
+🧠 Funcionales / Contextuales
+Vanta Explicativo
+
+Con un gesto de estar hablando o señalando un pizarrón/pergamino.
+
+Ideal para tutoriales, explicaciones de lore, mecánicas o guías.
+
+Vanta Anunciante
+
+Tal vez con un megáfono, cartel o pergamino.
+
+Para novedades, actualizaciones, noticias.
+
+Vanta de Mantenimiento
+
+Con herramientas o un casco, cara preocupada.
+
+Perfecto para cuando el sitio está en mantenimiento o hay errores.
+
+Vanta Narrador
+
+Sosteniendo un libro antiguo o con una pose teatral.
+
+Para historias, fanfics o resúmenes de capítulos.
+
+Vanta Investigador
+
+Lupa en mano, gesto inquisitivo.
+
+Útil para teorías, análisis de personajes o eventos del lore.
+
+🎭 Emocionales / Expresivos
+Vanta Miedoso
+
+Temblando, con ojos más grandes, quizás escondido detrás de una espada.
+
+Bueno para situaciones de suspenso, monstruos o eventos oscuros.
+
+Vanta Enojado
+
+Frunciendo el ceño (con los ojos o cejas flotantes), espada desenfundada.
+
+Para debates, críticas o eventos intensos.
+
+Vanta Feliz
+
+Con una sonrisa, saltando o con corazones.
+
+Para agradecimientos, logros, comunidad o contenido positivo.
+
+Vanta Triste o Melancólico
+
+Cabeza baja, gotas de lluvia.
+
+Para noticias tristes o despedidas de personajes.
+
+Vanta Sorprendido
+
+Ojos bien abiertos, manos al rostro.
+
+Para revelaciones, secretos o easter eggs.
+
+📍 Posicionales
+Vanta Izquierda / Derecha
+
+Simplemente reflejado hacia un lado o mirando hacia una dirección específica.
+
+Útil para colocarlo junto al contenido según el flujo de lectura.
+
+Vanta con Globo de Texto
+
+Con un bocadillo estilo cómic.
+
+Ideal para mensajes rápidos o encabezados destacados.
+
+🧙‍♂️ Temáticos
+Vanta Witcher
+
+Con espadas de plata y acero al descubierto, pociones.
+
+Para contenido puro de Geralt y su historia.
+
+Vanta Hechicero
+
+Con signos mágicos brillando en sus manos.
+
+Para temas de magia, hechiceras o señales.
+
+Vanta Monstruo/Híbrido
+
+Con un disfraz de Leshen, Kikimora u otro monstruo.
+
+Perfecto para entradas del bestiario.
+--------------------------------------------------------------------------------------
+
+
 

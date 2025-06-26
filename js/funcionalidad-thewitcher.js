@@ -171,36 +171,84 @@ function showSlider(type){
 // --------------------------------------------------------------
 // 6. Funcionalidad para el botón de sonido en el iframe de Spotify
 // --------------------------------------------------------------
+// document.addEventListener('DOMContentLoaded', () => {
+//   const iframe = document.getElementById('spotify-iframe');
+//   const btn    = document.getElementById('sound-toggle');
+//   let playing  = false;
+
+//   function enableButton() {
+//     if (btn.disabled) {
+//       btn.disabled = false;
+//       console.log('[Spotify] iframe cargado → botón habilitado');
+//     }
+//   }
+
+//   // 1) Si ya está completado, habilita ya; sino, espera al load
+//   if (iframe.readyState === 'complete' || iframe.complete) {
+//     enableButton();
+//   } else {
+//     iframe.addEventListener('load', enableButton);
+//   }
+
+//   // 2) Click → postMessage + toggle icono
+//   btn.addEventListener('click', () => {
+//     console.log('[Spotify] click → toggle');
+//     iframe.contentWindow.postMessage(
+//       { command: 'toggle' },
+//       'https://open.spotify.com'
+//     );
+//     playing = !playing;
+//     btn.innerHTML = playing
+//       ? '<i class="fas fa-bell-slash"></i>'
+//       : '<i class="fas fa-bell"></i>';
+//   });
+// });
 document.addEventListener('DOMContentLoaded', () => {
-  const iframe = document.getElementById('spotify-iframe');
-  const btn    = document.getElementById('sound-toggle');
-  let playing  = false;
+    const audioPlayer = document.getElementById('audio-player');
+    const btn = document.getElementById('sound-toggle');
+    let isPlaying = false;
 
-  function enableButton() {
-    if (btn.disabled) {
-      btn.disabled = false;
-      console.log('[Spotify] iframe cargado → botón habilitado');
+    // Habilitar el botón cuando el audio esté listo
+    audioPlayer.addEventListener('canplaythrough', () => {
+        btn.disabled = false;
+        console.log('[Audio] El reproductor está listo');
+    });
+
+    // Manejar errores de carga
+    audioPlayer.addEventListener('error', () => {
+        console.error('[Audio] Error al cargar el archivo de música');
+        btn.disabled = true;
+        btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+    });
+
+    // Controlar el botón
+    btn.addEventListener('click', () => {
+        if (isPlaying) {
+            audioPlayer.pause();
+            console.log('[Audio] Música pausada');
+        } else {
+            audioPlayer.play()
+                .then(() => {
+                    console.log('[Audio] Música iniciada');
+                })
+                .catch(error => {
+                    console.error('[Audio] Error al reproducir:', error);
+                    btn.innerHTML = '<i class="fas fa-exclamation-triangle"></i>';
+                });
+        }
+        
+        isPlaying = !isPlaying;
+        updateButtonIcon();
+    });
+
+    // Actualizar icono del botón
+    function updateButtonIcon() {
+        btn.innerHTML = isPlaying 
+            ? '<i class="fas fa-bell-slash"></i>' 
+            : '<i class="fas fa-bell"></i>';
     }
-  }
 
-  // 1) Si ya está completado, habilita ya; sino, espera al load
-  if (iframe.readyState === 'complete' || iframe.complete) {
-    enableButton();
-  } else {
-    iframe.addEventListener('load', enableButton);
-  }
-
-  // 2) Click → postMessage + toggle icono
-  btn.addEventListener('click', () => {
-    console.log('[Spotify] click → toggle');
-    iframe.contentWindow.postMessage(
-      { command: 'toggle' },
-      'https://open.spotify.com'
-    );
-    playing = !playing;
-    btn.innerHTML = playing
-      ? '<i class="fas fa-bell-slash"></i>'
-      : '<i class="fas fa-bell"></i>';
-  });
+    // Precargar el audio
+    audioPlayer.load();
+    console.log('[Audio] Precargando archivo de música...');
 });
-

@@ -210,7 +210,7 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
               </div>
               <div class="buttons">
                 <button>VER MÁS</button>
-                <!-- <button>SUBSCRIBE</button> -->
+                <button>MÁS LOCALIZACIONES</button>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
               </div>
               <div class="buttons">
                 <button>VER MÁS</button>
-                <!-- <button>SUBSCRIBE</button> -->
+                <button>MÁS LOCALIZACIONES</button>
               </div>
             </div>
           </div>
@@ -248,7 +248,7 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
               </div>
               <div class="buttons">
                 <button>VER MÁS</button>
-                <!-- <button>SUBSCRIBE</button> -->
+                <button>MÁS LOCALIZACIONES</button>
               </div>
             </div>
           </div>
@@ -259,11 +259,15 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
               <div class="title">Aretuza</div>
               <!-- <div class="topic">Isla de Thanedd</div> -->
               <div class="des">
-                Aretuza, ubicada en la isla de Thanedd, es la escuela donde se forman las hechiceras más poderosas del Continente, como Yennefer. También es un centro político clave en el mundo mágico. En la Reunión de Thanedd se produce un golpe de Estado que divide a las hechiceras y marca el inicio de un conflicto entre facciones mágicas. Es un punto de inflexión en la saga, con traiciones, nuevas alianzas y la fuga de Ciri. Aparece en Tiempo de odio y Bautismo de fuego.
+                Aretuza, ubicada en la isla de Thanedd, es la escuela donde se forman las hechiceras más poderosas del
+                Continente, como Yennefer. También es un centro político clave en el mundo mágico. En la Reunión de
+                Thanedd se produce un golpe de Estado que divide a las hechiceras y marca el inicio de un conflicto
+                entre facciones mágicas. Es un punto de inflexión en la saga, con traiciones, nuevas alianzas y la fuga
+                de Ciri. Aparece en Tiempo de odio y Bautismo de fuego.
               </div>
               <div class="buttons">
                 <button>VER MÁS</button>
-                <!-- <button>SUBSCRIBE</button> -->
+                <button>MÁS LOCALIZACIONES</button>
               </div>
             </div>
           </div>
@@ -604,17 +608,24 @@ El Continente de The Witcher se formó tras la Conjunción de las Esferas, un ev
   <!-- contenedor oculto para el iframe -->
   <div id="spotify-container">
     <iframe id="spotify-iframe"
-      src="https://open.spotify.com/embed/playlist/4CNxMIKMPGDc8mCaaRqXqd?utm_source=generator&theme=0" width="1"
-      height="1" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture" loading="eager">
-    </iframe>
+  src="https://open.spotify.com/embed/playlist/4CNxMIKMPGDc8mCaaRqXqd?utm_source=generator&theme=0&autoplay=true&play=true"
+  width="1" height="1" style="position: absolute; left: -9999px;"
+  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+  loading="eager">
+</iframe>
 
   </div>
 
-  <!-- botón visible abajo-izq -->
-  <button id="sound-toggle" class="sound-button" disabled>
-    <i class="fas fa-bell"></i>
-  </button>
-
+<!-- Botón de control de sonido -->
+    <button id="sound-toggle" class="sound-button" disabled>
+        <i class="fas fa-bell"></i>
+    </button>
+    
+    <!-- Reproductor de audio oculto -->
+    <audio id="audio-player" loop>
+        <source src="./music/ambient-music-background.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
 
 
   <!-- Scripts externos -->
