@@ -64,8 +64,9 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scrollbar-width: thin; /* Ancho de la barra */
+  scrollbar-color: var(--accent-red) var(--dark-bg); /* Color del thumb y track */
 }
-
 html,
 body {
   width: 100%;
@@ -172,6 +173,34 @@ button {
   display: none !important;
 }
 
+/* ==============================
+   Personalización de la barra de desplazamiento
+   ============================== */
+
+/* Barra de desplazamiento global */
+::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra vertical */
+  height: 10px; /* Altura de la barra horizontal */
+}
+
+/* Track (fondo) de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background: var(--dark-bg); /* Fondo oscuro */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Thumb (control deslizante) de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background: var(--accent-red); /* Color del control deslizante */
+  border-radius: 5px; /* Bordes redondeados */
+  border: 2px solid var(--dark-bg); /* Borde para mejorar la apariencia */
+}
+
+/* Hover sobre el thumb */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-red-dark); /* Color más oscuro al pasar el ratón */
+}
+
 /* ------------------------------------------------------------
    Loader: al añadir .hide lo desvanecemos antes de quitarlo
    ------------------------------------------------------------ */
@@ -219,7 +248,7 @@ button {
 .main-header {
   position: relative;
   /* margin-top: -70px; */
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   overflow: hidden;
 }
@@ -500,12 +529,11 @@ section {
 
 /* + Carrousel completo para localizaciones y zonas interesantes del juego */
 .carousel {
-  /* height: 100vh; */
+  width: 100%; /* Cambia de 100vw */
   height: 80vh;
-  /* margin-top: -50px; */
-  width: 100vw;
   overflow: hidden;
   position: relative;
+  margin: 0 auto; /* Asegura centrado */
 }
 
 .carousel .list .item {
@@ -556,7 +584,7 @@ section {
 .carousel .list .item .buttons {
   display: grid;
   /* grid-template-columns: repeat(2, 130px); */
-  grid-template-columns: repeat(2, 160px);
+  grid-template-columns: repeat(2, 170px);
   grid-template-rows: 40px;
   gap: 5px;
   margin-top: 20px;
@@ -804,21 +832,6 @@ section {
 
 /* - Carrousel completo para localizaciones y zonas interesantes del juego */
 
-
-/* ==============================
-   Iframe oculto banda sonora
-   ============================== */
-#spotify-container {
-  position: absolute;
-  width: 100px; /* Mantén un tamaño mínimo */
-  height: 100px; /* Mantén un tamaño mínimo */
-  opacity: 0; /* Lo hace completamente transparente */
-  pointer-events: none; /* Desactiva interacciones directas */
-  z-index: -1; /* Envía el iframe detrás de otros elementos */
-  clip: rect(0, 0, 0, 0); /* Asegura que el iframe no sea visible */
-  clip-path: inset(100%); /* Otra capa de seguridad para ocultarlo */
-}
-
 /* ==============================
    Botón de control de sonido
    ============================== */
@@ -880,7 +893,12 @@ section {
 .sound-button[disabled] i {
     color: #666666;
 }
-
+#audio-player {
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
 
 /* ==============================
    Responsive
