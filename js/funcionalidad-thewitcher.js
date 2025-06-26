@@ -130,7 +130,7 @@ thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 // let timeRunning = 3000 ORIGINAL VALOR;
 // let timeAutoNext = 7000 ORIGINAL VALOR;
 let timeRunning = 1000; //Con 0 va bien, pero no da tiempo a que se vea el cambio de imagen
-let timeAutoNext = 16000;
+let timeAutoNext = 16000;// ESTE ES DE PRUEBAS PARA PODER EDITAR TRANQUILAMENTE
 
 nextDom.onclick = function(){
     showSlider('next');    
@@ -171,38 +171,6 @@ function showSlider(type){
 // --------------------------------------------------------------
 // 6. Funcionalidad para el botón de sonido en el iframe de Spotify
 // --------------------------------------------------------------
-// document.addEventListener('DOMContentLoaded', () => {
-//   const iframe = document.getElementById('spotify-iframe');
-//   const btn    = document.getElementById('sound-toggle');
-//   let playing  = false;
-
-//   function enableButton() {
-//     if (btn.disabled) {
-//       btn.disabled = false;
-//       console.log('[Spotify] iframe cargado → botón habilitado');
-//     }
-//   }
-
-//   // 1) Si ya está completado, habilita ya; sino, espera al load
-//   if (iframe.readyState === 'complete' || iframe.complete) {
-//     enableButton();
-//   } else {
-//     iframe.addEventListener('load', enableButton);
-//   }
-
-//   // 2) Click → postMessage + toggle icono
-//   btn.addEventListener('click', () => {
-//     console.log('[Spotify] click → toggle');
-//     iframe.contentWindow.postMessage(
-//       { command: 'toggle' },
-//       'https://open.spotify.com'
-//     );
-//     playing = !playing;
-//     btn.innerHTML = playing
-//       ? '<i class="fas fa-bell-slash"></i>'
-//       : '<i class="fas fa-bell"></i>';
-//   });
-// });
 document.addEventListener('DOMContentLoaded', () => {
     const audioPlayer = document.getElementById('audio-player');
     const btn = document.getElementById('sound-toggle');
