@@ -1,8 +1,8 @@
 Siguientes añadidos:
-1. Barra de movimiento de web con tematica de witcherverse [check]
-2. Cursor de la Web con tematica the witcher []
+1. Barra de movimiento de web con tematica de witcherverse [CHECK]
+2. Cursor de la Web []
 3. Tarjetas para armas y Alquimia []
-4. Estilos a los botones del carrousel de localizaciones []
+4. Estilos a los botones del carrousel de localizaciones [CHECK]
 5. Buscar e investigar que hacer con el bestiario (una de las partes mas importantes) []
 6. Lore -> Libros, comics, novelas que haya por ahí, videojuegos (incluyedo thronebreaker) []
 7. Expansiones quizá se va y se hace una página para información de los videojuegos []

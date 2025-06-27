@@ -169,7 +169,33 @@ function showSlider(type){
 }
 
 // --------------------------------------------------------------
-// 6. Funcionalidad para el botón de sonido en el iframe de Spotify
+// 6. fUNCIONALIDAD DE TARJETAS DE ARMAS Y ARMADURAS
+// --------------------------------------------------------------
+        document.querySelectorAll('.weapon-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-15px)';
+                card.style.boxShadow = '0 15px 30px rgba(224, 62, 62, 0.5)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(-10px)';
+                card.style.boxShadow = '0 10px 25px rgba(224, 62, 62, 0.4)';
+            });
+            
+            // Efecto de botón
+            const button = card.querySelector('.view-button');
+            button.addEventListener('mouseenter', () => {
+                button.style.transform = 'scale(1.05)';
+            });
+            
+            button.addEventListener('mouseleave', () => {
+                button.style.transform = 'scale(1)';
+            });
+        });
+
+
+// --------------------------------------------------------------
+// 7. Funcionalidad para el botón de sonido en el iframe de Spotify
 // --------------------------------------------------------------
 document.addEventListener('DOMContentLoaded', () => {
     const audioPlayer = document.getElementById('audio-player');
@@ -220,3 +246,5 @@ document.addEventListener('DOMContentLoaded', () => {
     audioPlayer.load();
     console.log('[Audio] Precargando archivo de música...');
 });
+
+

@@ -12,13 +12,13 @@
 
 /* Importaciones de fuentes locales */
 @font-face {
-  font-family: 'thewitcher-title';
-  src: url('../font/Thewitcher-jnOj.ttf') format('truetype');
+  font-family: "thewitcher-title";
+  src: url("../font/Thewitcher-jnOj.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'thewitcher-text';
-  src: url('../font/PFDinTextCondPro-Regular.ttf') format('truetype');
+  font-family: "thewitcher-text";
+  src: url("../font/PFDinTextCondPro-Regular.ttf") format("truetype");
 }
 
 /* ----------------------------------
@@ -37,12 +37,11 @@
   --text-gray: #aaaaaa;
 
   /* Tipografia TheWitcher Nueva */
-  --font-title-new: 'thewitcher-title', sans-serif;
-  --font-text-new: 'thewitcher-text', sans-serif;
+  --font-title-new: "thewitcher-title", sans-serif;
+  --font-text-new: "thewitcher-text", sans-serif;
   /* Tipografías */
   --font-title: "Cinzel", serif;
   --font-body: "Roboto", sans-serif;
-
 
   /* Transiciones */
   --transition-fast: 0.2s ease;
@@ -64,9 +63,12 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scrollbar-width: thin; /* Ancho de la barra */
-  scrollbar-color: var(--accent-red) var(--dark-bg); /* Color del thumb y track */
+  scrollbar-width: thin;
+  /* Ancho de la barra */
+  scrollbar-color: var(--accent-red) var(--dark-bg);
+  /* Color del thumb y track */
 }
+
 html,
 body {
   width: 100%;
@@ -99,12 +101,14 @@ button {
   cursor: pointer;
   font-family: var(--font-text-new);
 }
+
 .boton-info {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 70px;
 }
+
 .boton-principal {
   background: var(--accent-red-dark);
   color: white;
@@ -125,6 +129,7 @@ button {
   padding-right: 3.3em;
   cursor: pointer;
 }
+
 .boton-principal .icon {
   background: white;
   margin-left: 1em;
@@ -156,6 +161,7 @@ button {
 .boton-principal:active .icon {
   transform: scale(0.95);
 }
+
 /* Contenedor centrado */
 .container {
   width: 90%;
@@ -179,26 +185,34 @@ button {
 
 /* Barra de desplazamiento global */
 ::-webkit-scrollbar {
-  width: 10px; /* Ancho de la barra vertical */
-  height: 10px; /* Altura de la barra horizontal */
+  width: 10px;
+  /* Ancho de la barra vertical */
+  height: 10px;
+  /* Altura de la barra horizontal */
 }
 
 /* Track (fondo) de la barra de desplazamiento */
 ::-webkit-scrollbar-track {
-  background: var(--dark-bg); /* Fondo oscuro */
-  border-radius: 5px; /* Bordes redondeados */
+  background: var(--dark-bg);
+  /* Fondo oscuro */
+  border-radius: 5px;
+  /* Bordes redondeados */
 }
 
 /* Thumb (control deslizante) de la barra de desplazamiento */
 ::-webkit-scrollbar-thumb {
-  background: var(--accent-red); /* Color del control deslizante */
-  border-radius: 5px; /* Bordes redondeados */
-  border: 2px solid var(--dark-bg); /* Borde para mejorar la apariencia */
+  background: var(--accent-red);
+  /* Color del control deslizante */
+  border-radius: 5px;
+  /* Bordes redondeados */
+  border: 2px solid var(--dark-bg);
+  /* Borde para mejorar la apariencia */
 }
 
 /* Hover sobre el thumb */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--accent-red-dark); /* Color más oscuro al pasar el ratón */
+  background: var(--accent-red-dark);
+  /* Color más oscuro al pasar el ratón */
 }
 
 /* ------------------------------------------------------------
@@ -462,19 +476,23 @@ section {
 .wrapper::before {
   top: 0;
   height: 100%;
-  background-image: linear-gradient(to top,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%);
+  background-image: linear-gradient(
+    to top,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
 }
 
 .wrapper::after {
   bottom: 0;
   opacity: 1;
-  background-image: linear-gradient(to bottom,
-      transparent 46%,
-      rgba(12, 13, 19, 0.5) 68%,
-      rgba(12, 13, 19) 97%);
+  background-image: linear-gradient(
+    to bottom,
+    transparent 46%,
+    rgba(12, 13, 19, 0.5) 68%,
+    rgba(12, 13, 19) 97%
+  );
 }
 
 .card:hover .wrapper::before,
@@ -501,7 +519,8 @@ section {
   transition: all 0.5s;
   position: absolute;
   z-index: -1;
-  margin-bottom: -30px; /*Pendiente de pruebas*/
+  margin-bottom: -30px;
+  /*Pendiente de pruebas*/
 }
 
 .card:hover .character {
@@ -529,11 +548,13 @@ section {
 
 /* + Carrousel completo para localizaciones y zonas interesantes del juego */
 .carousel {
-  width: 100%; /* Cambia de 100vw */
+  width: 100%;
+  /* Cambia de 100vw */
   height: 80vh;
   overflow: hidden;
   position: relative;
-  margin: 0 auto; /* Asegura centrado */
+  margin: 0 auto;
+  /* Asegura centrado */
 }
 
 .carousel .list .item {
@@ -577,6 +598,7 @@ section {
 .carousel .list .item .topic {
   color: var(--accent-red-dark);
 }
+
 .carousel .list .item .des {
   font-size: 18px;
 }
@@ -609,11 +631,13 @@ section {
   height: 2.8em;
   cursor: pointer;
 }
+
 .carousel .list .item .buttons .boton-ver-mas:hover {
   background-color: var(--black);
   color: var(--text-white);
-  transition: .5s;
+  transition: 0.5s;
 }
+
 /* .carousel .list .item .buttons button:nth-child(2) {
   background-color: var(--accent-red-dark);
   color: var(--text-white);
@@ -685,7 +709,7 @@ section {
   font-family: monospace;
   font-weight: bold;
   font-size: 20px;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .arrows button:hover {
@@ -708,7 +732,7 @@ section {
   transform: translateY(50px);
   filter: blur(20px);
   opacity: 0;
-  animation: showContent .5s 1s linear 1 forwards;
+  animation: showContent 0.5s 1s linear 1 forwards;
 }
 
 @keyframes showContent {
@@ -743,7 +767,7 @@ section {
   bottom: 50px;
   left: 50%;
   /* border-radius: 30px; */
-  animation: showImage .5s linear 1 forwards;
+  animation: showImage 0.5s linear 1 forwards;
 }
 
 @keyframes showImage {
@@ -758,7 +782,7 @@ section {
 
 .carousel.next .thumbnail .item:nth-last-child(1) {
   overflow: hidden;
-  animation: showThumbnail .5s linear 1 forwards;
+  animation: showThumbnail 0.5s linear 1 forwards;
 }
 
 .carousel.prev .list .item img {
@@ -773,7 +797,7 @@ section {
 }
 
 .carousel.next .thumbnail {
-  animation: effectNext .5s linear 1 forwards;
+  animation: effectNext 0.5s linear 1 forwards;
 }
 
 @keyframes effectNext {
@@ -781,7 +805,6 @@ section {
     transform: translateX(150px);
   }
 }
-
 
 /* prev click */
 
@@ -809,7 +832,7 @@ section {
 .carousel.prev .thumbnail .item:nth-child(1) {
   overflow: hidden;
   opacity: 0;
-  animation: showThumbnail .5s linear 1 forwards;
+  animation: showThumbnail 0.5s linear 1 forwards;
 }
 
 .carousel.next .arrows button,
@@ -837,6 +860,7 @@ section {
   .carousel {
     height: 100vh;
   }
+
   .carousel .list .item .content {
     padding-right: 0;
     top: 10%;
@@ -845,20 +869,22 @@ section {
   .carousel .list .item .content .title {
     font-size: 30px;
   }
-  .carousel .list .item .buttons {
-  display: grid;
-  /* grid-template-columns: repeat(2, 130px); */
-  grid-template-columns: repeat(1, 250px);
-  row-gap: 20px;
-}
-  .arrows {
-  gap: 18px;
-}
 
-.arrows button {
-  width: 40px;
-  height: 40px;
-}
+  .carousel .list .item .buttons {
+    display: grid;
+    /* grid-template-columns: repeat(2, 130px); */
+    grid-template-columns: repeat(1, 250px);
+    row-gap: 20px;
+  }
+
+  .arrows {
+    gap: 18px;
+  }
+
+  .arrows button {
+    width: 40px;
+    height: 40px;
+  }
 }
 
 /* - Carrousel completo para localizaciones y zonas interesantes del juego */
@@ -867,68 +893,339 @@ section {
    Botón de control de sonido
    ============================== */
 .sound-button {
-    position: fixed;
-    bottom: 20px;
-    left: 20px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    background: #ffffffcc;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    z-index: 1000;
-    transition: all 0.3s ease;
-    padding: 0;
-    margin: 0;
-    outline: none;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  background: #ffffffcc;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  padding: 0;
+  margin: 0;
+  outline: none;
 }
 
-.sound-button:hover, 
+.sound-button:hover,
 .sound-button:focus {
-    background: #ff4757;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: scale(1.05);
+  background: #ff4757;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
 }
 
 .sound-button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
 .sound-button i {
-    font-size: 24px;
-    color: #333;
-    pointer-events: none;
-    transition: color 0.3s ease;
+  font-size: 24px;
+  color: #333;
+  pointer-events: none;
+  transition: color 0.3s ease;
 }
 
 .sound-button:hover i,
 .sound-button:focus i {
-    color: #fff;
+  color: #fff;
 }
 
 .sound-button[disabled] {
-    opacity: 0.7;
-    cursor: not-allowed;
-    background: #cccccc;
+  opacity: 0.7;
+  cursor: not-allowed;
+  background: #cccccc;
 }
 
 .sound-button[disabled]:hover {
-    background: #cccccc;
-    transform: none;
+  background: #cccccc;
+  transform: none;
 }
 
 .sound-button[disabled] i {
-    color: #666666;
+  color: #666666;
 }
+
 #audio-player {
   position: fixed;
   opacity: 0;
   pointer-events: none;
   z-index: -1;
+}
+
+/* ==============================
+   CARTAS DE ARMAS, ARMADURAS Y ALQUIMIA
+   ============================== */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.section-title {
+  font-family: var(--font-title);
+  font-size: 2.8rem;
+  color: var(--accent-red);
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-title::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-red),
+    transparent
+  );
+  margin: 15px auto 0;
+  border-radius: 2px;
+}
+
+/* Estilos para las tarjetas */
+.weapons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+.weapon-card {
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.9),
+    rgba(12, 12, 12, 0.95)
+  );
+  border: 1px solid rgba(224, 62, 62, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(0);
+}
+
+.weapon-card:hover {
+  transform: translateY(-15px);
+  border-color: var(--accent-red);
+  box-shadow: 0 15px 30px rgba(224, 62, 62, 0.4);
+}
+
+.card-header {
+  position: relative;
+  height: 220px;
+  overflow: hidden;
+  border-bottom: 2px solid var(--accent-red);
+}
+
+.weapon-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.weapon-card:hover .weapon-image {
+  transform: scale(1.1);
+}
+
+.rarity {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.8);
+  color: var(--accent-red);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 1px solid var(--accent-red);
+}
+
+.card-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.weapon-name {
+  font-family: var(--font-title);
+  color: var(--accent-red);
+  font-size: 1.9rem;
+  margin-bottom: 12px;
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+}
+
+.weapon-name::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-red);
+  border-radius: 2px;
+}
+
+.weapon-type {
+  color: var(--text-gray);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+
+.weapon-description {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin-bottom: 25px;
+  flex-grow: 1;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  border-top: 1px solid rgba(224, 62, 62, 0.2);
+  padding-top: 18px;
+}
+
+.stat {
+  text-align: center;
+  flex: 1;
+}
+
+.stat-value {
+  font-size: 1.7rem;
+  color: var(--accent-red);
+  font-weight: bold;
+  font-family: var(--font-title);
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.card-footer {
+  background: rgba(20, 20, 20, 0.8);
+  padding: 18px 25px;
+  border-top: 1px solid rgba(224, 62, 62, 0.2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.crafting {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  display: flex;
+  align-items: center;
+}
+
+.crafting i {
+  color: var(--accent-red);
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+.view-button {
+  background: linear-gradient(
+    to bottom,
+    var(--accent-red),
+    var(--accent-red-dark)
+  );
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 1.5px;
+  box-shadow: 0 3px 8px rgba(224, 62, 62, 0.3);
+}
+
+.view-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(224, 62, 62, 0.5);
+}
+
+.view-button:active {
+  transform: translateY(0);
+}
+
+/* Efectos especiales */
+.witcher-symbol-card {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 45px;
+  height: 45px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,15 L60,40 L85,40 L65,55 L75,85 L50,70 L25,85 L35,55 L15,40 L40,40 Z" fill="none" stroke="%23e03e3e" stroke-width="5"/></svg>')
+    no-repeat center center;
+  opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .weapons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  .weapon-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .weapons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 
 /* ==============================
