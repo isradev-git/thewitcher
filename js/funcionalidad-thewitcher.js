@@ -130,7 +130,7 @@ thumbnailBorderDom.appendChild(thumbnailItemsDom[0]);
 // let timeRunning = 3000 ORIGINAL VALOR;
 // let timeAutoNext = 7000 ORIGINAL VALOR;
 let timeRunning = 1000; //Con 0 va bien, pero no da tiempo a que se vea el cambio de imagen
-let timeAutoNext = 16000;// ESTE ES DE PRUEBAS PARA PODER EDITAR TRANQUILAMENTE
+let timeAutoNext = 999000;// ESTE ES DE PRUEBAS PARA PODER EDITAR TRANQUILAMENTE
 
 nextDom.onclick = function(){
     showSlider('next');    
