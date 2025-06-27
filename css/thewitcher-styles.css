@@ -962,11 +962,11 @@ section {
    CARTAS DE ARMAS, ARMADURAS Y ALQUIMIA
    ============================== */
 
-.container {
+/* .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
-}
+} */
 
 .section-title {
   font-family: var(--font-title);
