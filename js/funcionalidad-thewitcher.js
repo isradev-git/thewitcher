@@ -250,75 +250,86 @@ document.addEventListener("DOMContentLoaded", () => {
 // --------------------------------------------------------------
 // 8. Funcionalidad de Vanta
 // --------------------------------------------------------------
+document.addEventListener('DOMContentLoaded', () => {
+  const container   = document.querySelector('.vanta-container');
+  const image       = document.querySelector('.vanta-image');
+  const bubble      = document.querySelector('.speech-bubble');
+  const options     = document.querySelector('.vanta-options');
+  const infoBtn     = document.getElementById('info-btn');
+  const musicBtn    = document.getElementById('music-toggle');
+  const themeBtn    = document.getElementById('theme-toggle');
+  const modal       = document.querySelector('.vanta-modal');
+  const closeModal  = modal.querySelector('.modal-close');
+  const audioPlayer = document.getElementById('audio-player');
+  let musicOn = false;
 
-document.addEventListener("DOMContentLoaded", () => {
-  const vantaContainer = document.querySelector(".vanta-container");
-  const speechBubble = document.querySelector(".speech-bubble");
-  const vantaModal = document.querySelector(".vanta-modal");
-  const modalClose = document.querySelector(".modal-close");
-  const silenceBtn = document.getElementById("silence-btn");
-  const sections = document.querySelectorAll("section");
+  // 1) Mostrar burbuja de bienvenida 2s tras carga
+  setTimeout(() => bubble.classList.add('active'), 2000);
 
-  // 1) Mostrar mensaje de bienvenida tras 2s
-  setTimeout(() => {
-    speechBubble.classList.add("active");
-  }, 2000);
-
-  // 2) Abrir modal SOLO al hacer clic en la imagen (container)
-  vantaContainer.addEventListener("click", () => {
-    vantaModal.classList.add("active");
+  // 2) Click en la imagen: toggle de las opciones
+  image.addEventListener('click', e => {
+    e.stopPropagation();
+    container.classList.toggle('show-options');
   });
 
-  // 3) Cerrar modal
-  modalClose.addEventListener("click", () => {
-    vantaModal.classList.remove("active");
+  // 3) Click fuera: ocultar solo las opciones
+  document.addEventListener('click', () => {
+    container.classList.remove('show-options');
   });
 
-  // 4) Silenciar: solo cierra la burbuja y NO abre popup
-  silenceBtn.addEventListener("click", (e) => {
-    e.stopPropagation(); // evitar propagación al container
-    speechBubble.classList.remove("active");
+  // 4) IntersectionObserver para actualizar el texto de la burbuja
+  const sections = document.querySelectorAll('section');
+  const messages = {
+    universe:   'Aquí explorarás el vasto universo de The Witcher…',
+    characters: 'Esta es la galería de personajes…',
+    location:   'Descubre los lugares emblemáticos…',
+    weapons:    'En esta sección encontrarás las armas…',
+    alchemy:    'La alquimia es esencial para cualquier brujo…',
+    bestiary:   'El bestiario contiene información sobre…',
+    lore:       'Sumérgete en la rica historia…',
+    expansions: 'Las expansiones añaden nuevas capas…'
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        bubble.textContent = messages[entry.target.id] || '¡Explora las secciones!';
+        bubble.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+  sections.forEach(sec => observer.observe(sec));
+
+  // 5) Info → abre modal
+  infoBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    modal.classList.add('active');
   });
 
-  // 5) Mensajes según sección visible
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const messages = {
-            universe:
-              "Aquí explorarás el vasto universo de The Witcher. Un mundo lleno de reinos en conflicto, criaturas mágicas y complejas historias políticas.",
-            characters:
-              "Esta es la galería de personajes. Conoce a Geralt, Yennefer, Ciri y muchos otros personajes que dan vida a este universo.",
-            location:
-              "Descubre los lugares emblemáticos del continente. Desde Kaer Morhen hasta las calles de Novigrad.",
-            weapons:
-              "En esta sección encontrarás las armas y armaduras más legendarias.",
-            alchemy:
-              "La alquimia es esencial para cualquier brujo. Aquí aprenderás sobre pociones, aceites y bombas.",
-            bestiary:
-              "El bestiario contiene información sobre criaturas y sus debilidades.",
-            lore: "Sumérgete en la rica historia del universo de The Witcher.",
-            expansions:
-              "Las expansiones añaden nuevas capas a la historia: Hearts of Stone y Blood and Wine.",
-          };
-          const msg =
-            messages[entry.target.id] || "¡Explora las diferentes secciones!";
-          document.querySelector(".vanta-message").textContent = msg;
-          speechBubble.classList.add("active");
-          setTimeout(() => speechBubble.classList.remove("active"), 12000); //Originalmente tenia 8000ms
-        }
-      });
-    },
-    { threshold: 0.5 }
-  );
+  // 6) Cerrar modal
+  closeModal.addEventListener('click', () => modal.classList.remove('active'));
+  modal.addEventListener('click', e => {
+    if (e.target === modal) modal.classList.remove('active');
+  });
 
-  sections.forEach((section) => observer.observe(section));
-
-  // 6) Cerrar modal al clicar fuera
-  window.addEventListener("click", (e) => {
-    if (e.target === vantaModal) {
-      vantaModal.classList.remove("active");
+  // 7) Música on/off
+  musicBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    if (!musicOn) {
+      audioPlayer.play().catch(() => {});
+      musicBtn.innerHTML = '<i class="fas fa-volume-mute"></i>';
+    } else {
+      audioPlayer.pause();
+      musicBtn.innerHTML = '<i class="fas fa-music"></i>';
     }
+    musicOn = !musicOn;
+  });
+
+  // 8) Tema claro/oscuro
+  themeBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    const isLight = document.body.classList.toggle('light-mode');
+    themeBtn.innerHTML = isLight
+      ? '<i class="fas fa-moon"></i>'
+      : '<i class="fas fa-sun"></i>';
   });
 });
