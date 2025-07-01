@@ -247,4 +247,106 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('[Audio] Precargando archivo de música...');
 });
 
+// --------------------------------------------------------------
+// 8. Funcionalidad de Vanta
+// --------------------------------------------------------------
 
+        document.addEventListener('DOMContentLoaded', function() {
+            const vantaContainer = document.querySelector('.vanta-container');
+            const speechBubble = document.querySelector('.speech-bubble');
+            const vantaModal = document.querySelector('.vanta-modal');
+            const modalClose = document.querySelector('.modal-close');
+            const silenceBtn = document.getElementById('silence-btn');
+            const sections = document.querySelectorAll('section');
+            let silenced = false;
+            
+            // Mostrar mensaje de bienvenida
+            setTimeout(() => {
+                speechBubble.classList.add('active');
+            }, 2000);
+            
+            // Abrir modal al hacer clic en Vanta
+            vantaContainer.addEventListener('click', () => {
+                vantaModal.classList.add('active');
+            });
+            
+            // Cerrar modal
+            modalClose.addEventListener('click', () => {
+                vantaModal.classList.remove('active');
+            });
+            
+            // Silenciar a Vanta
+            silenceBtn.addEventListener('click', () => {
+                silenced = !silenced;
+                silenceBtn.textContent = silenced ? 'Activar' : 'Silenciar';
+                if (silenced) {
+                    speechBubble.classList.remove('active');
+                }
+            });
+            
+            // Observador de intersección para las secciones
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !silenced) {
+                        // Mostrar mensaje específico para la sección
+                        const sectionId = entry.target.id;
+                        showSectionMessage(sectionId);
+                    }
+                });
+            }, { threshold: 0.5 });
+            
+            // Observar cada sección
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Mensajes específicos para cada sección
+            function showSectionMessage(sectionId) {
+                let message = '';
+                
+                switch(sectionId) {
+                    case 'universe':
+                        message = 'Aquí explorarás el vasto universo de The Witcher. Un mundo lleno de reinos en conflicto, criaturas mágicas y complejas historias políticas.';
+                        break;
+                    case 'characters':
+                        message = 'Esta es la galería de personajes. Conoce a Geralt, Yennefer, Ciri y muchos otros personajes que dan vida a este universo. Cada uno tiene su propia historia única.';
+                        break;
+                    case 'location':
+                        message = 'Descubre los lugares emblemáticos del continente. Desde Kaer Morhen hasta las calles de Novigrad, cada lugar tiene su propia magia y peligros.';
+                        break;
+                    case 'weapons':
+                        message = 'En esta sección encontrarás las armas y armaduras más legendarias. ¿Sabías que cada escuela de brujos tiene su propio estilo de equipamiento?';
+                        break;
+                    case 'alchemy':
+                        message = 'La alquimia es esencial para cualquier brujo. Aquí aprenderás sobre pociones, aceites y bombas que te ayudarán en tus enfrentamientos.';
+                        break;
+                    case 'bestiary':
+                        message = 'El bestiario contiene información sobre todas las criaturas que encontrarás en el continente. Conoce sus debilidades antes de enfrentarte a ellas.';
+                        break;
+                    case 'lore':
+                        message = 'Sumérgete en la rica historia del universo de The Witcher. Desde los libros originales hasta los eventos clave que han dado forma a este mundo.';
+                        break;
+                    case 'expansions':
+                        message = 'Las expansiones añaden nuevas capas a la historia. Hearts of Stone y Blood and Wine son consideradas de lo mejor en narrativa de videojuegos.';
+                        break;
+                    default:
+                        message = '¡Explora las diferentes secciones para descubrir todo sobre el universo de The Witcher!';
+                }
+                
+                // Actualizar y mostrar el mensaje
+                document.querySelector('.vanta-message').textContent = message;
+                speechBubble.classList.add('active');
+                
+                // Ocultar el mensaje después de 8 segundos
+                setTimeout(() => {
+                    speechBubble.classList.remove('active');
+                }, 8000);
+            }
+            
+            // Cerrar modal al hacer clic fuera
+            window.addEventListener('click', (e) => {
+                if (e.target === vantaModal) {
+                    vantaModal.classList.remove('active');
+                }
+            });
+        });
