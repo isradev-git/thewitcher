@@ -1327,6 +1327,7 @@ section {
   display: flex;
   align-items: center;
   margin-bottom: 30px;
+  flex-direction: column;
 }
 .vanta-info img {
   width: 150px;
