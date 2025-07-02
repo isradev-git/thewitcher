@@ -322,8 +322,11 @@ button {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  justify-content: center;
   margin-bottom: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .main-nav ul li a {
@@ -856,37 +859,6 @@ section {
   }
 }
 
-@media screen and (max-width: 678px) {
-  .carousel {
-    height: 100vh;
-  }
-
-  .carousel .list .item .content {
-    padding-right: 0;
-    top: 10%;
-  }
-
-  .carousel .list .item .content .title {
-    font-size: 30px;
-  }
-
-  .carousel .list .item .buttons {
-    display: grid;
-    /* grid-template-columns: repeat(2, 130px); */
-    grid-template-columns: repeat(1, 250px);
-    row-gap: 20px;
-  }
-
-  .arrows {
-    gap: 18px;
-  }
-
-  .arrows button {
-    width: 40px;
-    height: 40px;
-  }
-}
-
 /* - Carrousel completo para localizaciones y zonas interesantes del juego */
 
 /* ==============================
@@ -1219,11 +1191,11 @@ section {
   right: 100%;
   transform: translateX(-10px) translateY(50%);
   width: 200px;
-  background: rgba(20,20,20,0.95);
+  background: rgba(20, 20, 20, 0.95);
   border: 2px solid var(--accent-red);
   border-radius: 12px;
   padding: 10px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -1250,17 +1222,22 @@ section {
   border-radius: 50%;
   overflow: hidden;
   cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   animation: float 4s ease-in-out infinite;
   transition: transform 0.3s, box-shadow 0.3s;
 }
 @keyframes float {
-  0%,100% { transform: translateY(0); }
-  50%     { transform: translateY(-8px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
 }
 .vanta-image:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(224,62,62,0.4);
+  box-shadow: 0 8px 20px rgba(224, 62, 62, 0.4);
 }
 
 /* Opciones (info, música, tema, silenciar burbuja) */
@@ -1283,7 +1260,7 @@ section {
 .vanta-option-btn {
   width: 36px;
   height: 36px;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0, 0, 0, 0.7);
   color: #fff;
   border: none;
   border-radius: 50%;
@@ -1294,33 +1271,47 @@ section {
   transition: background 0.2s;
 }
 .vanta-option-btn:hover {
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
 }
 
 /* Modal de Vanta */
 .vanta-modal {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  display: flex; justify-content: center; align-items: center;
-  opacity: 0; pointer-events: none;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.4s ease;
+  z-index: 10000;
 }
 .vanta-modal.active {
-  opacity: 1; pointer-events: all;
+  opacity: 1;
+  pointer-events: all;
 }
 .modal-content {
-  background: linear-gradient(145deg, rgba(20,20,20,0.95), rgba(12,12,12,0.98));
-  width: 90%; max-width: 600px;
+  background: linear-gradient(
+    145deg,
+    rgba(20, 20, 20, 0.95),
+    rgba(12, 12, 12, 0.98)
+  );
+  width: 90%;
+  max-width: 600px;
   border: 2px solid var(--accent-red);
   border-radius: 10px;
-  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
   position: relative;
+  z-index: 10001;
 }
 .modal-header {
-  background: rgba(224,62,62,0.2);
-  padding: 20px; text-align: center;
+  background: rgba(224, 62, 62, 0.2);
+  padding: 20px;
+  text-align: center;
   border-bottom: 1px solid var(--accent-red);
 }
 .modal-header h2 {
@@ -1329,76 +1320,62 @@ section {
   font-size: 2rem;
 }
 .modal-body {
-  padding: 30px; line-height: 1.8;
+  padding: 30px;
+  line-height: 1.8;
 }
 .vanta-info {
-  display: flex; align-items: center; margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
 }
 .vanta-info img {
-  width: 150px; height: 150px;
+  width: 150px;
+  height: 150px;
   border-radius: 50%;
-  border: 3px solid var(--accent-red);
+  /* border: 3px solid var(--accent-red); */
   margin-right: 30px;
 }
 .vanta-bio h3 {
-  color: var(--accent-red); margin-bottom: 10px; font-size: 1.5rem;
+  color: var(--accent-red);
+  margin-bottom: 10px;
+  font-size: 1.5rem;
 }
 .modal-close {
-  position: absolute; top: 15px; right: 15px;
-  background: none; border: none;
-  color: var(--text-light); font-size: 1.5rem;
-  cursor: pointer; transition: color 0.3s;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
 }
 .modal-close:hover {
   color: var(--accent-red);
 }
 
+/*--------------------------------------------------------------------------------------*/
+/* ==============================
+   RESPONSIVE STYLES
+   ============================== */
 
-
-/* Responsive */
+/* Hasta 1024px (tablets en horizontal) */
 @media (max-width: 1024px) {
+  /* Armas: columnas ligeramente más pequeñas */
   .weapons-grid {
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
   }
-}
 
-@media (max-width: 768px) {
-  .section-title {
-    font-size: 2.3rem;
-  }
-
-  .weapon-card {
-    max-width: 400px;
-    margin: 0 auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .section-title {
-    font-size: 2rem;
-  }
-
-  .weapons-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .stats {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-/* ==============================
-   Responsive
-   ============================== */
-/* Hasta 1024px (tablets en horizontal) */
-@media (max-width: 1024px) {
+  /* Localizaciones: títulos un poco más pequeños */
   .section-location .section-title {
     font-size: 2.2rem;
   }
 
-  .carousel-arrow {
+  /* Flechas del carrusel */
+  .carousel-arrow,
+  .arrows button {
     width: 40px;
     height: 40px;
   }
@@ -1406,30 +1383,114 @@ section {
 
 /* Hasta 768px (tablets en vertical / móviles grandes) */
 @media (max-width: 768px) {
+  /*Menú principal*/
+  .main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+  }
+  /* Títulos de sección algo más pequeños */
+  .section-title {
+    font-size: 2.3rem;
+  }
+
+  /* Cartas de armas centradas y límite de ancho */
+  .weapon-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  /* Localizaciones: más padding vertical y títulos más pequeños */
   .section-location {
     padding: 60px 0;
   }
-
   .section-location .section-title {
     font-size: 2rem;
   }
 
+  /* Flechas del carrusel ligeramente más pequeñas */
   .carousel-arrow {
     width: 36px;
     height: 36px;
+  }
+  /*Estilos de Vanta*/
+  .vanta-container {
+    position: relative;
+    width: 50px;
+    height: 50px;
+  }
+  .vanta-assistant {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    z-index: 1000;
+  }
+  .vanta-options {
+    left: -0%;
+  }
+}
+
+/* Hasta 678px (móviles medianos) */
+@media screen and (max-width: 678px) {
+  /* Carrusel ocupa toda la altura */
+  .carousel {
+    height: 100vh;
+  }
+
+  /* Contenido dentro del carrusel */
+  .carousel .list .item .content {
+    top: 10%;
+    padding-right: 0;
+  }
+  .carousel .list .item .content .title {
+    font-size: 30px;
+  }
+  .carousel .list .item .buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  /* Flechas con más espacio */
+  .arrows {
+    gap: 18px;
+  }
+  .arrows button {
+    width: 40px;
+    height: 40px;
   }
 }
 
 /* Hasta 480px (móviles pequeños) */
 @media (max-width: 480px) {
+  /* Títulos de sección más compactos */
+  .section-title {
+    font-size: 2rem;
+  }
+
+  /* Armas: una columna */
+  .weapons-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Estadísticas apiladas */
+  .stats {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Localizaciones: menos padding y títulos más pequeños */
   .section-location {
     padding: 40px 0;
   }
-
   .section-location .section-title {
     font-size: 1.75rem;
   }
 
+  /* Flechas del carrusel más pequeñas y bien posicionadas */
   .carousel-arrow {
     width: 32px;
     height: 32px;
@@ -1437,12 +1498,8 @@ section {
     right: 8px;
   }
 
-  /* Ajustar padding de cada item */
+  /* Mini-padding en cada item del carrusel */
   .carousel-item {
     padding: 0 4px;
   }
 }
-
-/* ===========================
-   RESPONSIVE (Ajustes para móviles)
-   =========================== */
