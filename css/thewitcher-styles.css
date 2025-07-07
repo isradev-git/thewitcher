@@ -1363,6 +1363,18 @@ p.vanta-text {
   color: var(--accent-red);
 }
 
+/* ==============================
+   Estilos para Alquimia
+   (Cartas de pociones, aceites, bombas)
+   ============================== */
+.alchemy-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 35px;
+  margin-top: 40px;
+}
+
+
 /*--------------------------------------------------------------------------------------*/
 /* ==============================
    RESPONSIVE STYLES
