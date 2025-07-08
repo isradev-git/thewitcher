@@ -97,11 +97,11 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".weapon-card").forEach((card) => {
     card.addEventListener("mouseenter", () => {
       card.style.transform = "translateY(-15px)";
-      card.style.boxShadow = "0 15px 30px rgba(224,62,62,0.5)";
+      // card.style.boxShadow = "0 15px 30px rgba(224,62,62,0.5)";
     });
     card.addEventListener("mouseleave", () => {
       card.style.transform = "translateY(0px)";
-      card.style.boxShadow = "0 10px 25px rgba(224,62,62,0.4)";
+      // card.style.boxShadow = "0 10px 25px rgba(224,62,62,0.4)";
     });
     const button = card.querySelector(".view-button");
     if (button) {

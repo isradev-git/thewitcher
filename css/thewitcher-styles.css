@@ -456,6 +456,7 @@ section {
   position: absolute;
   width: 100%;
   z-index: -1;
+  box-shadow: 0 5px 15px rgba(224, 62, 62, 0.5);
 }
 
 .card:hover .wrapper {
@@ -485,6 +486,7 @@ section {
     rgba(12, 13, 19, 0.5) 68%,
     rgba(12, 13, 19) 97%
   );
+  box-shadow: 0 5px 30px rgba(224,62,62,0.5);
 }
 
 .wrapper::after {
@@ -985,10 +987,11 @@ section {
     rgba(12, 12, 12, 0.95)
   );
   border: 1px solid rgba(224, 62, 62, 0.2);
-  border-radius: 8px;
+  /* border-radius: 8px; */
   overflow: hidden;
   transition: all 0.4s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+  /* box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6); Original */
+  box-shadow: 0 15px 30px rgba(224,62,62,0.5);
   position: relative;
   height: 100%;
   display: flex;
@@ -1043,6 +1046,7 @@ section {
 }
 
 .weapon-name {
+  /* min-height: 4em; */
   font-family: var(--font-title);
   color: var(--accent-red);
   font-size: 1.9rem;
@@ -1373,7 +1377,6 @@ p.vanta-text {
   gap: 35px;
   margin-top: 40px;
 }
-
 
 /*--------------------------------------------------------------------------------------*/
 /* ==============================
