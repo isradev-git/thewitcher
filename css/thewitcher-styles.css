@@ -331,7 +331,7 @@ button {
 
 .main-nav ul li a {
   font-family: var(--font-title);
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--text-white);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -354,22 +354,32 @@ section {
 
 .section-title {
   font-family: var(--font-title-new);
-  font-size: 2.5rem;
   color: var(--accent-red);
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 50px;
   position: relative;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 4.5rem;
+	/* font-weight: 900; */
 }
 
 .section-title::after {
-  content: "";
-  display: block;
-  width: 60px;
+  width: 60%;
   height: 4px;
   background-color: var(--accent-red);
   margin: 12px auto 0;
   border-radius: 2px;
+  content: "";
+  display: block;
+  background: linear-gradient(
+    to right,
+    transparent,
+    var(--accent-red),
+    transparent
+  );
 }
+
 
 /* ======================================
    SECCIÓN “El Universo de The Witcher”
@@ -945,33 +955,6 @@ section {
   padding: 20px;
 } */
 
-.section-title {
-  font-family: var(--font-title);
-  font-size: 2.8rem;
-  color: var(--accent-red);
-  text-align: center;
-  margin-bottom: 50px;
-  position: relative;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.section-title::after {
-  content: "";
-  display: block;
-  width: 100px;
-  height: 4px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    var(--accent-red),
-    transparent
-  );
-  margin: 15px auto 0;
-  border-radius: 2px;
-}
-
 /* Estilos para las tarjetas */
 .weapons-grid {
   display: grid;
@@ -1393,7 +1376,7 @@ p.vanta-text {
 
   /* Localizaciones: títulos un poco más pequeños */
   .section-location .section-title {
-    font-size: 2.2rem;
+    font-size: 3rem;
   }
 
   /* Flechas del carrusel */
